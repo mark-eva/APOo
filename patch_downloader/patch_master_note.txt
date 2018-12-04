@@ -1,0 +1,1454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="p_AFMaximized" dir="ltr" lang="en-GB"><head><link rel="stylesheet" charset="UTF-8" type="text/css" href="/epmos/adf/styles/cache/ep-mos-a4vy71-en-ltr-cmp-s.css"><title>Document  756671.1</title><link rel="stylesheet" type="text/css" afrres="true" href="/epmos/mosr/kmstyles-18.4.0.0_180913.css"><style type="text/css" afrres="true">input::-webkit-input-placeholder {
+                    color: #737373;
+                    font-style: italic;
+                    opacity: 1;
+            }
+            input::-moz-placeholder {
+                    color: #737373;
+                    font-style: italic;
+                    opacity: 1;
+            }
+            input:-moz-placeholder {   /* Older versions of Firefox */
+                    color: #737373;
+                    font-style: italic;
+                    opacity: 1;
+            }
+            input:-ms-input-placeholder {
+                    color: #737373;
+                    font-style: italic;
+                    opacity: 1;
+            }</style><link rel="stylesheet" type="text/css" afrres="true" href="/epmos/mosr/jgrowl-18.4.0.0_180913.css"><link rel="stylesheet" type="text/css" afrres="true" href="/epmos/mosr/notification-18.4.0.0_180913.css"><link rel="stylesheet" type="text/css" afrres="true" href="/epmos/mosr/oracleSuggest-18.4.0.0_180913.css"></head><body class="x14t p_AFMaximized"><noscript>This page uses JavaScript and requires a JavaScript enabled browser.Your browser is not JavaScript enabled.</noscript><div id="afr::Splash" class="x1a1"><div class="x1a2"><span class="x1a3"><img src="/epmos/afr/ss.gif" width="43" height="48" border="0" style="vertical-align:middle" alt=""><span class="x1a4">Loading...</span></span></div></div><script type="text/javascript" src="/epmos/adf/jsLibs/Locale1_2_12_3_3.js"></script><script type="text/javascript">var AdfAssert = new Object();AdfAssert.DEBUG = false;</script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/boot-11.1.1.7.1-4197.js"></script><script type="text/javascript">AdfLogger.DEFAULT_LEVEL=AdfLogger.OFF;(AdfLogger.LOGGER=new AdfLogger('global', new AdfBufferedLogWriter())).register();var checkAgentSupport = true;AdfAgent._UNSUPPORTED_BROWSER_ALERT="You are using an unsupported browser. The supported browsers are Internet Explorer 7 and higher, Firefox 2.0.0.2 and higher, Safari 3.1.2 and higher, and Google Chrome 1.0 or higher.";AdfAgent.AGENT = AdfAgent.getAgent(window);var lookAndFeel = new AdfDhtmlLookAndFeel(window);AdfAgent._LOG_WRITERS = "NativeLogWriter";AdfPage.PAGE = lookAndFeel.createPage();var page = AdfPage.PAGE;page.setBaseResourceUrl("/epmos");page.setAccessibilityMode("default");page.setAnimationEnabled(false);page.__setSessionIdentifier('bty79kr56');page.__setOutputMode('default');</script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/core-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/AdfTranslations-11.1.1.7.1-4197en_GB.js?loc=en_GB&amp;skinId=ep.mos"></script><script type="text/javascript" src="/epmos/mosr/jquery-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/commonKM-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/clickStreamLogger-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/messageArea-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/clickstream-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/customComponent-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/promptedText-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/fwkComponent-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/jgrowl-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/notifications-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/cookies-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/presence-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/invitation-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/oracleSuggest-18.4.0.0_180913.js"></script><script type="text/javascript" src="/epmos/mosr/globalSearchBarUtil-18.4.0.0_180913.js"></script><script type="text/javascript">var pageState = "";
+  var backDecrementUnit = '3';
+  var executeBackJavascript = 'true';
+  $( document ).ready(function() {
+    pageState = getQueryVariable("_adf.ctrl-state");
+    });
+    
+   function getQueryVariable(variable)
+    {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+    }
+    
+    window.onbeforeunload = function () {
+        var pageURL = document.URL;
+        if(executeBackJavascript == 'true' && 
+            (pageURL.indexOf("epmos/faces/DocumentDisplay") > 0 || pageURL.indexOf("epmos/faces/SearchDoc") > 0) ){
+            try{
+                var numberState = pageState.split("_")[1] - backDecrementUnit;
+                window.name = pageState.split("_")[0] + "_" + numberState;
+            }catch(err){}
+        }
+    } 
+    
+    function handleSugClick (event) {
+        var link = event.getSource();
+        AdfCustomEvent.queue(link, "logSugClickStream", {}, false);
+    }
+        
+    function openAskCommunity(event){
+        window.open('https://community.oracle.com/discussion/create.jspa?showCommSelectHelpText=true','_blank');
+    }</script><script type="text/javascript">var popupHandle;
+    
+     window.onkeydown = function (event){
+        var key = event.keyCode ;
+        if (key == 27) {
+            if(popupHandle != null){
+                popupHandle.hide();
+            }
+            return false;
+        }
+      }
+     
+     function savePopupId(event){
+       var source = event.getSource();
+       popupHandle = source;
+    }</script><script type="text/javascript">function onCommentsKeyUp(event) {
+        var source = event.getSource();
+        var feedbackButtonComponent = source.findComponent("cb1");
+        var domElement = AdfRichUIPeer.getDomElementForComponent(feedbackButtonComponent);
+        var submittedComments = source.getSubmittedValue();
+        if (submittedComments == null || submittedComments == '') {
+            feedbackButtonComponent.setProperty('disabled', true);
+            document.getElementById(feedbackButtonComponent.getClientId()).disabled = true;
+            AdfDomUtils.addOrRemoveCSSClassName(true, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+        }
+        else {
+            feedbackButtonComponent.setProperty('disabled', false);
+            document.getElementById(feedbackButtonComponent.getClientId()).disabled = false;
+            AdfDomUtils.addOrRemoveCSSClassName(false, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+        }
+    }</script><script type="text/javascript">referenceRedirect = function (event) {
+          var referenceId = event.getSource().getProperty('referenceId');
+          AdfCustomEvent.queue(event.getSource(), "referenceRedirectEvent", 
+          {
+              referenceId : referenceId
+          },
+true);
+      }</script><script type="text/javascript">showRecentDocContextMenu = function (event) {
+          var id = event.getSource().getProperty('bid');
+          var docUrl = event.getSource().getProperty('docUrl');
+          var bugUrl = event.getSource().getProperty('bugUrl');
+          var type = event.getSource().getProperty('type');
+          var component = document.getElementById(event.getSource().getClientId());
+          if (type == 'BUG') {
+              component.href = bugUrl + id + "&parent=WIDGET_RECENT_DB";
+          }
+          else {
+              component.href = docUrl + id + "&parent=WIDGET_RECENT_DB";
+          }
+      }
+      recentLinkWidgetRedirect = function (event) {
+          var documentId = event.getSource().getProperty('documentId');
+          AdfCustomEvent.queue(event.getSource(), "recentLinkWidgetRedirectEvent", 
+          {
+              documentId : documentId
+          },true);
+      }</script><script type="text/javascript">function onCommentsKeyUp(event) {
+    //event.cancel();
+    var source = event.getSource();
+    var feedbackButtonComponent = source.findComponent("cb1");
+    var domElement = AdfRichUIPeer.getDomElementForComponent(feedbackButtonComponent);
+    var submittedComments = source.getSubmittedValue();
+    
+    if (submittedComments == null || submittedComments == '') {
+        var rateComponent = source.findComponent("sor1");
+        var helpComponent = source.findComponent("sor2");
+        var findComponent = source.findComponent("sor3");
+        if (rateComponent.getSubmittedValue() == "1" || 
+            helpComponent.getSubmittedValue() == "1" ||
+            findComponent.getSubmittedValue() == "1") {
+            feedbackButtonComponent.setProperty('disabled', true);
+            document.getElementById(feedbackButtonComponent.getClientId()).disabled = true;
+            AdfDomUtils.addOrRemoveCSSClassName(true, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+        }
+    } else {
+        feedbackButtonComponent.setProperty('disabled', false);
+        document.getElementById(feedbackButtonComponent.getClientId()).disabled = false;
+        AdfDomUtils.addOrRemoveCSSClassName(false, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+    }
+}
+
+function onCommentsFocus(event) {
+    var source = event.getSource();
+    var submittedComments = source.getSubmittedValue();
+    var requiredText = source.getProperty("requiredText");
+    if (submittedComments == requiredText)
+        source.setValue("");
+}
+
+function onQuestionValueChange(event) {
+    var source = event.getSource();
+    var submittedValue = source.getSubmittedValue();
+    var commentsComponent = source.findComponent("it1");
+    var requiredText = commentsComponent.getProperty("requiredText");
+    var feedbackButtonComponent = source.findComponent("cb1");
+    var domElement = AdfRichUIPeer.getDomElementForComponent(feedbackButtonComponent);
+    var commentsValue = commentsComponent.getSubmittedValue();
+    
+    if (submittedValue == "1") {
+        if (commentsValue == null || commentsValue == '') {
+            feedbackButtonComponent.setProperty('disabled', true);
+            document.getElementById(feedbackButtonComponent.getClientId()).disabled = true;
+            AdfDomUtils.addOrRemoveCSSClassName(true, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+            commentsComponent.setValue(requiredText);
+        }
+    } else {
+        var rateComponent = source.findComponent("sor1");
+        var helpComponent = source.findComponent("sor2");
+        var findComponent = source.findComponent("sor3");
+        if (rateComponent.getSubmittedValue() != "1" &&
+            helpComponent.getSubmittedValue() != "1" &&
+            findComponent.getSubmittedValue() != "1") { 
+            feedbackButtonComponent.setProperty('disabled', false);
+            document.getElementById(feedbackButtonComponent.getClientId()).disabled = false;
+            AdfDomUtils.addOrRemoveCSSClassName(false, domElement, AdfRichUIPeer.DISABLED_STYLECLASS);
+            if (commentsValue == requiredText)
+                commentsComponent.setValue("");
+        }
+    }
+}</script><script type="text/javascript">function clickMessageCenter(event) {
+        var link = event.getSource();
+        var tabName = link.getProperty('tabName');
+        AdfCustomEvent.queue(link, "logClickstream", {}, true);
+    }
+    function disableSignout(event){
+        var firingPrompt=event.getSource();
+        firingPrompt.setStyleClass('goMenuItemDisabled');
+        firingPrompt.setDestination(null);
+              }</script><script type="text/javascript">function showPVAddEditPopup(event) {
+            event.cancel();
+            var source = event.getSource();
+            var popupId = ('pvAddEdit');
+            
+            var popup = AdfPage.PAGE.findComponentByAbsoluteId(popupId);
+            var halignid = 'pvOnOffLink';
+            if (popup == null){ 
+                popup = AdfPage.PAGE.findComponentByAbsoluteId('pt1:svHd:'+attrId+':'+popupId); 
+                halignid = 'pt1:svHd:pv1:pvOnOffLink';
+            }
+            if (!popup.isPopupVisible()) {
+                var hints = {
+                };
+                hints[AdfRichPopup.HINT_LAUNCH_ID] = source.getClientId();
+                hints[AdfRichPopup.HINT_ALIGN_ID] = halignid;
+                hints[AdfRichPopup.HINT_ALIGN] = AdfRichPopup.ALIGN_AFTER_END;
+                popup.show(hints);
+            }
+        }
+
+        
+        function hidePVAddPopup(event) {
+            event.cancel();
+            var source = event.getSource();
+            var attrId = source.getProperty('attrId');
+            var popupId = source.getProperty('popupId');
+            var isCanceled = source.getProperty('isCanceled');
+            var popup = AdfPage.PAGE.findComponentByAbsoluteId(attrId+':pvAdd');
+            if (popup.isPopupVisible()) {
+                if (isCanceled)
+                    popup.cancel();
+                else 
+                    popup.hide();
+            }
+        }
+        
+        handlePVTextfieldKeyUpAdd = function (event) { 
+            var inputTextComponent = event.getSource();
+            var sourceId = event.getSource().getClientId();
+            var okButtonId = sourceId.replace(inputTextComponent.getId(), 'pvAddOK');
+            sourceId = sourceId + '::content';
+            //var input = $('input[id*=' + sourceId + ']');
+            var inp = document.getElementById(sourceId);
+            var okButton = document.getElementById(okButtonId);
+            //alert(inp.value+' : '+okButton.className.indexOf('Disabled'));
+            if (okButton.className.indexOf('Disabled')  > 0  && inp.value != null){
+                AdfCustomEvent.queue(event.getSource(), "textFieldKeyUpEventAdd", {fvalue : inp.value}, false);
+            } else if (okButton.className.indexOf('Disabled')  == -1  && (inp.value == '' || inp.value == null)){
+                AdfCustomEvent.queue(event.getSource(), "textFieldKeyUpEventAdd", {fvalue : inp.value}, false);
+            }
+            
+        }
+        handlePVTextfieldKeyUp = function (event) { 
+            var inputTextComponent = event.getSource();
+            var sourceId = event.getSource().getClientId();
+            var okButtonId = sourceId.replace(inputTextComponent.getId(), 'pvEditOK');
+            sourceId = sourceId + '::content';
+            //var input = $('input[id*=' + sourceId + ']');
+            var inp = document.getElementById(sourceId);
+            var okButton = document.getElementById(okButtonId);
+            //alert(inp.value+' : '+okButton.className.indexOf('Disabled'));
+            if (okButton.className.indexOf('Disabled')  > 0  && inp.value != null){
+                AdfCustomEvent.queue(event.getSource(), "textFieldKeyUpEvent", {fvalue : inp.value}, false);
+            } else if (okButton.className.indexOf('Disabled')  == -1  && (inp.value == '' || inp.value == null)){
+                AdfCustomEvent.queue(event.getSource(), "textFieldKeyUpEvent", {fvalue : inp.value}, false);
+            }
+            
+        }</script><script type="text/javascript">//
+    var legalStatement = 'If you accept the chat invitation, a transcript of your chat with the engineer will be attached to the service request while it is open. For details, review the <a href="{0}" target="_blank">Oracle Global Customer Support Security Practices</a>.'.replace('{0}', 'http://www.oracle.com/us/support/library/customer-support-security-practices-069170.pdf');
+    var notificationHtmlElement = '<div id="notification" > ' +
+      '  <p>{0} has requested to chat about  ' +
+      '  <a target="_blank" href="/epmos/faces/SrDetail?needSrDetailRefresh=true&srNumber={1}">SR {1}: {2}</a></p>' +
+      '  <span id="expireTime">Chat request will close in <span class="chatInvitationCountDown">10</span> minutes </span>' +
+      '  <div id="commandButtonBar"> ' +
+      '    <button id="declineInvitation" title="When you click \'No, I\'m Busy\' a text box will appear, allowing you to provide feedback to the customer on your availability.">No, I\'m Busy</button> ' +
+      '    <button id="acceptInvitation">Accept Invitation</button> ' +
+      '  </div>' +
+      '  <div id="invitationLegalStatement"> ' + legalStatement + ' </div>' +
+      '</div>';
+      
+    var recoverNotificationElement = '<div id="recoverNotification" > ' +
+        '  <p>You have active conversations in progress. Do you want to recover them?</p>' +
+        '  <div id="commandButtonBarRecover"> ' +
+        '    <button id="declineRecoverNotification">No, don\'t recover</button> ' +
+        '    <button id="acceptRecoverNotification">Yes, recover</button> ' +
+        '  </div>' +
+        '</div>';
+      
+    var notificationHtmlElementHeader = '<div class="oracleLogo"><img src="/epmos/faces/common/images/invitations/oracle.png" /></div>' +
+      '<div class="chatLogo">' +
+      '  <img src="/epmos/faces/common/images/chat_icon.png" class="chatIcon"/>' +
+      '  <span class="chatWithOracle">Chat with <span class="chatWithOracle_MOS">My Oracle Support</span></span> ' +
+      '</div>' +
+      '<div style="clear:both" />';
+    INVITATION.config.ROOT_CONTEXT = '/epmos/';
+    INVITATION.config.isScreenReaderMode = false;
+    INVITATION.config.tabbedChatLoader = '/epmos/faces/common/images/spinning-wheel.gif';
+    INVITATION.config.messageForAnInvitationActionAlreadyProcessed = 'This invitation is no longer valid.';
+    INVITATION.config.genericError = 'An unexpected error occured, please try again later.';
+    INVITATION.config.messageForPopupBlockerEnabled = 'Please disable the popup blocker and then click Accept again.';
+    INVITATION.config.invitationAsPlainText = '{0} has requested to chat about  SR {1}: {2}';
+    INVITATION.config.invitationAsHtmlElement = notificationHtmlElement;
+    INVITATION.config.recoverNotificationAsPlainText = 'You have active conversations in progress. Do you want to recover them?';
+    INVITATION.config.recoverNotificationAsHtmlElement = recoverNotificationElement;    
+    INVITATION.config.invitationHeaderForHtmlElement = notificationHtmlElementHeader;
+    INVITATION.config.unreadMessage = 'message';
+    INVITATION.config.unreadMessages = 'messages';
+    INVITATION.config.declineMessage = 'Provide feedback to the customer on your availability';
+    INVITATION.config.declineMessageSubmit = 'Send';
+
+    var enableDesktopNotificationsElement = '<div id="enableDesktopNotifications" > ' +
+        '  <p>Oracle Support might want to chat with you about your open service requests. While you are signed into My Oracle Support, we can pop-up a message to let you know your engineer wants to chat. To allow these pop-up notifications, do two things: <br></p><ol><li>Click Enable Notifications below</li><li>When the browser offers a second prompt for you to allow/show notifications, click that button too.</li></ol>Once this is done, you will see a notification whenever Oracle Support attempts to contact you by chat while you are logged into My Oracle Support.</p> ' +
+        '  <div id="commandButtonBarDesktopNotifications"> ' +
+        '    <button id="rejectDesktopNotifications">Don\'t Enable</button> ' +
+
+        '    <button id="learnMoreDesktopNotifications" onclick="window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP1498\', \'_blank\'); return false;">Learn More</button> ' +
+        '    <button id="acceptDesktopNotifications">Enable Notifications</button> ' +
+        '  </div>' +
+        '</div>';
+    var enableDesktopNotificationsElementHeader = 'Enable Notifications from Oracle Support';
+
+    INVITATION.config.notificationIcon                = "./common/images/new_chat_invite.png";
+    INVITATION.config.notificationAutoCloseInterval   = 20000;
+    INVITATION.config.notificationTitleForInvitations = 'New Chat Invitation[s] from:';
+    INVITATION.config.notificationTextAboutSR         = 'about SR';
+    INVITATION.config.NOTIFICATIONS_COOKIE_NAME       = "mos.notifications";
+    INVITATION.config.NOTIFICATIONS_COOKIE_EXPIRE     = 365 * 5;
+   
+    var USE_JET = 'false' === 'true';    
+    if (USE_JET) {
+      INVITATION.switchToJet();
+    }
+   
+    function enableDesktopNotifications() {
+      if (COOKIES.getCookieValue(INVITATION.config.NOTIFICATIONS_COOKIE_NAME)) {
+        return;
+      }
+      if ((typeof notify !== 'undefined') && notify.isSupported) {
+        if (notify.permissionLevel() === notify.PERMISSION_DEFAULT) {
+          var rejected = true,
+              elementToGetFocus = false ? '.jGrowl-header > h3' : '#acceptDesktopNotifications';
+          $.jGrowl.defaults.closeTemplate = "";
+          $.jGrowl(enableDesktopNotificationsElement, {
+            theme: 'desktop-notifications',
+            // make JAWS happy with an h3 element
+            header : '<h3>' + enableDesktopNotificationsElementHeader + '</h3>', 
+            closeDuration: 100,
+            sticky: true,
+            beforeOpen : function (notificationWindow, m, o) {
+              $(notificationWindow).width("500px");
+            },
+            afterOpen: function (notificationWindow, m, o) { 
+
+              $(notificationWindow).find("#acceptDesktopNotifications").click(function () {
+                rejected = false;              
+                $(notificationWindow).children("div.jGrowl-close").click();              
+                notify.requestPermission();
+              });
+              $(notificationWindow).find("#rejectDesktopNotifications").click(function () {
+                $(notificationWindow).children("div.jGrowl-close").click();              
+              });
+              // hide close button
+              $(notificationWindow).find('.jGrowl-close').hide();
+              // focus on header if screen reader, otherwise on enable notifications button
+              $(notificationWindow).find(elementToGetFocus).attr('tabindex', 0);
+              $(notificationWindow).find(elementToGetFocus).focus();
+            },
+            close: function() {
+              if (rejected) {
+                COOKIES.setCookieValue(INVITATION.config.NOTIFICATIONS_COOKIE_NAME, false, INVITATION.config.NOTIFICATIONS_COOKIE_EXPIRE);
+              }
+            }
+          });
+        }
+      }
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener('load', function () {
+        enableDesktopNotifications();      
+      }, false);      
+    }
+
+    function displayLoadingIndicator(browserWindow) {
+      if(!browserWindow.document.title) {
+        var tabbedChatLoader = '/epmos/faces/common/images/spinning-wheel.gif';
+        browserWindow.document.write('<img src="' + tabbedChatLoader + '" style="position: absolute; left: 50%; top: 50%; width: 32px; height: 32px; margin: -16px 0 0 -16px;" />');
+      }
+    }
+    
+    function openChatWindowForCustomer(event) {
+      var button = event.getSource();
+      var chatSrNumber = button.getProperty('srNumber');
+
+      var isJet = INVITATION.isJet();
+      if (isJet) {
+        // Switch to ADF temporary, because JET doesn't support CIC yet
+        INVITATION.switchToAdf();
+      }
+
+      var chatWindow = INVITATION.openChatWindow();
+      
+      var onError = function() {
+        if (chatWindow && !chatWindow.document.title) { // about:blank
+          chatWindow.close();
+        }
+        if (arguments.length >= 1) {
+          var error = arguments[0].error;
+          var errorMessage = arguments[0].errorMessage;
+          if ('ERROR_CONTACT_AVAILABILITY_CHANGED' === error) {
+            alert('Support engineer availability has changed. Please refresh SR and try again.');
+          } else if ('ERROR_CREATE_CHAT_CONVERSATION' === error)  {
+            alert('Chat cannot be initiated. Please refresh the SR page and try again.' + '\n\n' + errorMessage);
+          } else if ('ERROR_INVITE_ON_SR_PENDING' === error) {  
+            alert('Chat cannot be initiated because your assigned Support Engineer has already sent a chat request on this SR that is awaiting your response. Please check all My Oracle Support windows for pending chat invitations. '); 
+          } else {
+            alert('An unexpected error occured, please try again later.');
+          }
+        } else {
+          alert('An unexpected error occured, please try again later.');                
+        }
+      }
+      
+      var appName = true ? 'MOSCP' : 'MOSEP';
+      jQuery.ajax( {
+        type: 'POST',
+        dataType: 'json',
+        url : '/epmos/rest/mos/chat/1.0/invite-support-engineer.jsp', 
+        data: {srNumber: chatSrNumber, applicationName: appName},
+        complete: function() {
+          if (isJet) {
+            // Switch back to JET for EIC
+            INVITATION.switchToJet();
+          }
+        },
+        error: function() {
+          onError();  
+        },
+        success : function (result) {            
+          if (result) {
+            if (result.success) {
+              if (!chatWindow.document.title) { // about:blank
+                chatWindow.location = INVITATION.getChatWindowUrl();
+              } else {
+                chatWindow.ignorePageUnload = true;
+                chatWindow.location.reload();
+              }
+              chatWindow.focus();                
+            } else {
+              onError(result);
+            }
+          } else {
+            onError();  
+          }
+       } 
+      });
+      
+    }
+  //</script><script type="text/javascript">//
+    var includeSocial = true;
+    
+    // default poll interval when active in ms.
+    PRESENCE.DEFAULT_ACTIVE_POLL_INTERVAL = 30000;
+    PRESENCE.MAX_POLLING_TIME = 900000;
+    PRESENCE.userAvailable = true;
+
+    if(includeSocial && PRESENCE.userAvailable) {
+        try {
+            PRESENCE.initPresence();
+            if(document.startPoll) {
+                document.startPoll();
+            }
+        } catch (err) {
+            if(typeof(console) != 'undefined')
+              console.log('Error: ' + err);
+        }
+    }
+    //</script><script type="text/javascript">var popupShown = false;
+
+        function readCookie(name)
+        {
+          var nameEQ = name + "=";
+          var cookies = document.cookie.split(';');
+          for(var i=0;i < cookies.length;i++)
+          {
+            var c = cookies[i];
+            while (c.charAt(0)==' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0)
+            {
+              return unescape(c.substring(nameEQ.length, c.length));
+            }
+          }
+          return null;
+        }
+        
+        function readExpCookie() {
+            var timeoutCookie = readCookie('ORASSO_AUTH_HINT');
+            var expTimestamp = 0;
+            if (timeoutCookie && timeoutCookie.length > 5) {
+                var utcTimeout = timeoutCookie.substring(5);
+                
+                if (utcTimeout.length == 14) {
+                    var year	= utcTimeout.substring(0, 4);
+                    var month	= utcTimeout.substring(4, 6);
+                    var day	= utcTimeout.substring(6, 8);
+                    var hour	= utcTimeout.substring(8, 10);
+                    var min	= utcTimeout.substring(10, 12);
+                    var sec	= utcTimeout.substring(12, 14);
+                    
+                    var timeoutDate = new Date(year, month - 1, day, hour, min, sec, 0);
+                    expTimestamp = timeoutDate.getTime();
+                }
+            }
+                
+            if (expTimestamp < 1)
+                expTimestamp = -1;
+            
+            return expTimestamp;
+        }
+        
+        function showPopup(timeout, target) {
+            if (target) {
+                var serverLink = AdfPage.PAGE.findComponent(target);
+                if (serverLink != null) {
+                    AdfCustomEvent.queue(serverLink, 'showPopup', {toLevel:timeout}, true);
+                    popupShown = true;
+                } else {
+                    setTimeout(function(){checkForTimeout(target);}, 1*60*1000);
+                }
+            } else {
+                var timeoutMessage = 'Your SSO login will expire in ' + timeout + ' minutes.  Save the work in all your open applications.  Failure to do this may result in loss of data. \n\nLogout and login back into one application to force an SSO re-login.  This may also require you to re-login to other open applications.\n\nSSO logins expire after 8 hours.'
+                alert(timeoutMessage);
+            }
+        }
+        
+        function hideSsoToPopup(target) {
+            if (target) {
+                var serverLink = AdfPage.PAGE.findComponent(target);
+                if (serverLink != null) {
+                    AdfCustomEvent.queue(serverLink, 'hidePopup', {source:'update'}, true);
+                    popupShown = false;
+                }
+            }
+        }
+        
+        function checkForTimeout(target) {
+            var expTimestamp = readExpCookie();
+                
+            if (expTimestamp != -1) {
+                var d = new Date();
+                var nowUTC = d.getTime() + d.getTimezoneOffset()*60*1000;
+                
+                var timeDiff = expTimestamp - nowUTC;
+                if (timeDiff <= 1800000) { // 30 mins
+                    if (timeDiff <= 1200000) { // 20 mins
+                        if (timeDiff <= 600000) { // 10 mins
+                            if (timeDiff <= 300000) {// 5 mins - show expired dialog
+                                if (timeDiff > 5000) { // do not make call to server if session is expiring
+                                    showPopup(0, target);
+                                }
+                            } else {
+                                showPopup(10, target);
+                            }
+                        } else {
+                            showPopup(20, target);
+                        }
+                    } else {
+                        showPopup(30, target);
+                    }
+                } else if (popupShown) {
+                    hideSsoToPopup(target);
+                }
+            }
+        }
+        
+        function initializeTimeout(target) {
+            window.onfocus = function(){checkForTimeout(target);};
+        
+            checkForTimeoutDriver(target);
+        }
+        
+        function checkForTimeoutDriver(target) {
+            checkForTimeout(target);
+            setTimeout(function(){checkForTimeoutDriver(target);}, 5*60*1000);
+        }
+        
+        function clientHidePopup(event) {
+            popupShown = false;
+            var source = event.getSource();
+            AdfCustomEvent.queue(source, 'hidePopup', {source:'remind'}, true);
+        }</script><script type="text/javascript">function unsavedDataHandlerHook(event) {
+        try {
+          if(unsavedDataHandler) {
+            if(unsavedDataHandler(event))
+              return;
+          }
+        } catch(ex) {
+          ;
+        }
+    }
+
+    function menuTabClicked(event) {
+        var inputText = event.getSource();
+        var value = inputText.getProperty('tabName');
+
+        //need to call javascript clickstream.js in a separate call for logOmnitureTrackClickEvent
+        // log clickstream data into Omniture server
+        //logOmnitureTrackClickEvent(value, 'NAV', 'CLICK');
+
+        //notify server to log clickstream data into portalDB
+        //used to send the curently selected source
+       var sourceShortName = $('input[id*="selectedSourceShortName"]').val();
+       AdfCustomEvent.queue(inputText, "notifyServer",
+         {
+            element : value ,
+            shortName : sourceShortName
+         }, true);
+
+    }</script><script type="text/javascript">function externalLinkClicked(event) {
+        var inputText = event.getSource();
+        var value = inputText.getProperty('linkName');
+        AdfCustomEvent.queue(inputText, "logClickExternalLink",
+         {
+            element : value
+         }, true);
+    }
+
+    function kmAdvSearchClicked(event) {
+        var commandLink = event.getSource();
+        AdfCustomEvent.queue(commandLink, "advSearchClicked", {}, true);
+    }</script><script type="text/javascript">function refreshFavMenu(event) {
+        var button = event.getSource();
+        AdfCustomEvent.queue(button, "refreshList", {}, true);
+    }
+    
+    function refreshFavManager(event) {
+        var button = event.getSource();
+        AdfCustomEvent.queue(button, "refreshData", {}, true);
+    }</script><script type="text/javascript">validateSearchTerm = function(event){
+                        event.cancel();
+                    }</script><script type="text/javascript">function handleFBClick (event) {
+            var link = event.getSource();
+            var surveyId = link.getProperty('surveyId');
+            AdfCustomEvent.queue(link, "logFBClickStream", {surveyId:surveyId}, true);
+        }
+
+        function getTopOffset(h) {
+            return (window.screen.height / 2)-(h/2);
+        }
+
+        function getLeftOffset(w) {
+            return (window.screen.width / 2)-(w/2);
+        }</script><script type="text/javascript">function hidePopup(event)
+      {
+          event.cancel();
+          var source = event.getSource();
+          var popup = source.getParent();
+          var elemFound = false;
+          while (!elemFound)
+          {
+              try 
+              {
+                  elemFound = popup.isPopupVisible();
+              }
+              catch (err)
+              {
+                  popup = popup.getParent();
+              }
+          }
+          popup.hide();
+          return false;
+      }</script><iframe name="afr::PushIframe" id="afr::PushIframe" style="display:none" src="/epmos/afr/blank.html"></iframe><input type="hidden" id="oracle.adf.view.faces.RICH_UPDATE"><style id="adfFrameBustStyle">body {display:none}</style><script type="text/javascript">AdfDhtmlPage.__frameBusting("differentOrigin");</script><div id="d1"><a id="d1::skip" href="#" class="x14v">Skip to content</a><form id="f1" name="f1" class="xyz" method="POST" action="/epmos/faces/DocumentDisplay?_adf.ctrl-state=1bdcyo5hpe_4&amp;id=756671.1"><div id="kmPgTpl:pt_headerPs" class="x2ab xp1" style="position:absolute;width:auto;height:auto;top:0px;bottom:0px;left:0px;right:0px;min-height:200px;width:auto;overflow:visible;height:auto"><div id="kmPgTpl:pt_headerPs::f" class="xp4" style="position:relative;height:30px;border-width:0px"><span id="kmPgTpl:pglH" class="xpj x1a" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><div id="kmPgTpl:svHd:pt_brBar" class="xpj xpf" style="min-width:960px;">&nbsp;<div id="kmPgTpl:svHd:pt_brBar::l" style="position:absolute;overflow:hidden;top:0px;left:0px;width:260px;bottom:0px"><span id="kmPgTpl:svHd:pt_brLogo" class="x23l x1a" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><a id="kmPgTpl:svHd:permLink" class="x2b2 xfu" href="/epmos/faces/UserPersonalization">Accessibility Preferences</a><img id="kmPgTpl:svHd:pt_i1" title="My Oracle Support Logo" alt="My Oracle Support Logo" class="xjd" src="/epmos/common/images/mos_logo.gif"></span></div><div id="kmPgTpl:svHd:pt_brBar::c" style="position:absolute;overflow:hidden;top:0px;left:260px;bottom:0px;right:0px"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svHd:pgl2" class="x23t x1a" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><tbody><tr><td valign="top"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svHd:pv1:powerView" class="x1a"><tbody><tr><td valign="middle"><div id="kmPgTpl:svHd:pv1:pvToolbar" class="xk3" style="overflow:hidden;"><div class="xre"><div id="kmPgTpl:svHd:pv1:pvToolbar::oc" class="xjk"><table cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td class="x117"><a id="kmPgTpl:svHd:pv1:pvptcl" class="xfe" style="display:none" onclick="return false;" href="#">pvText</a></td><td class="x117"><a id="kmPgTpl:svHd:pv1:pvptclL" class="xfe" style="display:none" onclick="return false;" href="#">pvText</a></td><td class="x117"><div id="kmPgTpl:svHd:pv1:pvOnOffLink" class="p_AFTextOnly xfg" _afrGrp="0"><table cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td><a onclick="this.focus();return false" class="x13d" href="#"><img id="kmPgTpl:svHd:pv1:pvOnOffLink::icon" src="/epmos/common/images/pvoff.png" alt="" class="x13i"><span class="x13e"> PowerView is Off</span></a></td><td id="kmPgTpl:svHd:pv1:pvOnOffLink::popArea"><div _afrPopId="kmPgTpl:svHd:pv1:m2" class="x13g"><a tabIndex="-1" class="x13h" id="kmPgTpl:svHd:pv1:pvOnOffLink::popEl"></a></div></td></tr></tbody></table><div id="kmPgTpl:svHd:pv1:pvOnOffLink::popCtr" style="display:none"><div id="kmPgTpl:svHd:pv1:m2" class="x11d af_menu_popup" _afrDth="1"><table cellpadding="0" cellspacing="0" border="0" summary="" class="x11q" id="kmPgTpl:svHd:pv1:m2::menu"><tr><td class="x22l p_AFDisabled" id="kmPgTpl:svHd:pv1:m2::sUpBg"><div id="kmPgTpl:svHd:pv1:m2::ScrollUp" class="x11r p_AFDisabled" style="display:none"><span class="x11t"></span></div></td></tr><tr><td><div id="kmPgTpl:svHd:pv1:m2::ScrollBox" class="x12t"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" id="kmPgTpl:svHd:pv1:m2::ScrollContent" class="af_menu_scroll-content"><tr id="kmPgTpl:svHd:pv1:togglePV" class="x11k x11u" onclick="return false;" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x11x"><div class="x12u"></div></td><td class="x11y">Turn PowerView On</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr id="kmPgTpl:svHd:pv1:editPvId" class="x11k x11u p_AFDisabled" onclick="return false;" _afrDth="2" _afrGrp="0"><td class="x11x"><div class="x12u"></div></td><td class="x11y">Edit</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr id="kmPgTpl:svHd:pv1:newPV" class="x11k x11u" onclick="return false;" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x11x"><div class="x12u"></div></td><td class="x11y">New</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr id="kmPgTpl:svHd:pv1:m3" class="x11d x11w p_AFDisabled" _afrDth="2" _afrGrp="0"><td class="x11t"><div class="x12i"></div></td><td class="x125">Recent PowerViews</td><td class="x126"><div class="x12i"></div></td><td class="x127"><div class="x12c"></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x11q" id="kmPgTpl:svHd:pv1:m3::menu"><tr><td class="x22l p_AFDisabled" id="kmPgTpl:svHd:pv1:m3::sUpBg"><div id="kmPgTpl:svHd:pv1:m3::ScrollUp" class="x11r p_AFDisabled" style="display:none"><span class="x11t"></span></div></td></tr><tr><td><div id="kmPgTpl:svHd:pv1:m3::ScrollBox" class="x12t"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" id="kmPgTpl:svHd:pv1:m3::ScrollContent" class="af_menu_scroll-content"></table></div></td></tr><tr><td class="x22m" id="kmPgTpl:svHd:pv1:m3::sDwnBg"><div id="kmPgTpl:svHd:pv1:m3::ScrollDown" class="x11s" style="display:none"><span class="x11t"></span></div></td></tr></table></td></tr><tr id="kmPgTpl:svHd:pv1:m4" class="x11d x11w p_AFDisabled" _afrDth="2" _afrGrp="0"><td class="x11t"><div class="x12i"></div></td><td class="x125">Named PowerViews</td><td class="x126"><div class="x12i"></div></td><td class="x127"><div class="x12c"></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x11q" id="kmPgTpl:svHd:pv1:m4::menu"><tr><td class="x22l p_AFDisabled" id="kmPgTpl:svHd:pv1:m4::sUpBg"><div id="kmPgTpl:svHd:pv1:m4::ScrollUp" class="x11r p_AFDisabled" style="display:none"><span class="x11t"></span></div></td></tr><tr><td><div id="kmPgTpl:svHd:pv1:m4::ScrollBox" class="x12t"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" id="kmPgTpl:svHd:pv1:m4::ScrollContent" class="af_menu_scroll-content"></table></div></td></tr><tr><td class="x22m" id="kmPgTpl:svHd:pv1:m4::sDwnBg"><div id="kmPgTpl:svHd:pv1:m4::ScrollDown" class="x11s" style="display:none"><span class="x11t"></span></div></td></tr></table></td></tr><tr id="kmPgTpl:svHd:pv1:managePVMI" class="x11k x11u p_AFDisabled" onclick="return false;" _afrDth="2" _afrGrp="0"><td class="x11x"><div class="x12u"></div></td><td class="x11y">Manage PowerViews</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr id="kmPgTpl:svHd:pv1:learnMorePV" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Learn more about PowerView...</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr></table></div></td></tr><tr><td class="x22m" id="kmPgTpl:svHd:pv1:m2::sDwnBg"><div id="kmPgTpl:svHd:pv1:m2::ScrollDown" class="x11s" style="display:none"><span class="x11t"></span></div></td></tr></table></div></div></div></td></tr></tbody></table></div><div id="kmPgTpl:svHd:pv1:pvToolbar::eoi" class="xjv"><div id="kmPgTpl:svHd:pv1:pvToolbar::eoc" class="xk8"></div></div></div><div class="xlv"></div></div></td><td valign="middle"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svHd:pv1:pl1" class="x1a"><tbody><tr></tr></tbody></table></td></tr></tbody></table><div id="kmPgTpl:svHd:pv1:pvAddEdit" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:pv1:pvAddEdit::content"></div></div><div id="kmPgTpl:svHd:pv1:managePV" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:pv1:managePV::content"></div></div></td><td valign="top"><div id="kmPgTpl:svHd:sug1:sggstrpp" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:sug1:sggstrpp::content"></div></div><span id="kmPgTpl:svHd:sug1:pglcl" class="x1a"></span></td><td valign="top"><div id="kmPgTpl:svHd:pop1" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:pop1::content"></div></div></td></tr></tbody></table></div><div id="kmPgTpl:svHd:pt_brBar::r" style="position:absolute;overflow:hidden;top:0px;right:0px;bottom:0px"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svHd:pgl3" class="x23m x1a"><tbody><tr><td valign="middle"><div id="kmPgTpl:svHd:r1" class="xpg"><div id="kmPgTpl:svHd:r1:0:dc_mb1" class="x6e" style="overflow:hidden;"><div class="xde"><div id="kmPgTpl:svHd:r1:0:dc_mb1::oc" class="af_menuBar_content"><table cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td class="x11b"><div id="kmPgTpl:svHd:r1:0:dc_m1" class="x11d xdt" _afrDth="1" _afrGrp="0"><div class="x12q" tabindex="0"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img src="/epmos/common/images/step_valid.png" alt="" class="x11e"></td><td class="x11c"><a onclick="return false" class="x11h" tabindex="-1" href="#">Mark (Available)</a></td><td><div class="x11p"></div></td></tr></table></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x11q" id="kmPgTpl:svHd:r1:0:dc_m1::menu"><tr><td class="x22l p_AFDisabled" id="kmPgTpl:svHd:r1:0:dc_m1::sUpBg"><div id="kmPgTpl:svHd:r1:0:dc_m1::ScrollUp" class="x11r p_AFDisabled" style="display:none"><span class="x11t"></span></div></td></tr><tr><td><div id="kmPgTpl:svHd:r1:0:dc_m1::ScrollBox" class="x12t"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" id="kmPgTpl:svHd:r1:0:dc_m1::ScrollContent" class="af_menu_scroll-content"><tr id="kmPgTpl:svHd:r1:0:dc_cmi1" class="x11k x11u" onclick="return false;" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x11x"><img src="/epmos/common/images/step_valid.png" alt=""></td><td class="x11y">Available (for My Oracle Support initiated chat)</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr id="kmPgTpl:svHd:r1:0:dc_cmi2" class="x11k x11u" onclick="return false;" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x11x"><img src="/epmos/common/images/step_notvisitable.png" alt=""></td><td class="x11y">Not Available</td><td class="x11z"><div class="x12u"></div></td><td class="x120"><div class="x12u"></div></td></tr><tr class="x12h"><td class="x11t"><div class="x12i"></div></td><td colspan="3"><div class="x12j"></div></td></tr><tr id="kmPgTpl:svHd:r1:0:dc_cmi3" class="x11l x11v" _afrDth="2" _afrGrp="1" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Learn about Chat...</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr class="x12h"><td class="x11t"><div class="x12i"></div></td><td colspan="3"><div class="x12j"></div></td></tr><tr id="kmPgTpl:svHd:r1:0:dc_cmi4" class="x11l x11v" _afrDth="2" _afrGrp="2" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">My Account</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr class="x12h"><td class="x11t"><div class="x12i"></div></td><td colspan="3"><div class="x12j"></div></td></tr><tr id="kmPgTpl:svHd:r1:0:dc_cmi5" class="x11l x11v" _afrDth="2" _afrGrp="3" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Sign Out</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr></table></div></td></tr><tr><td class="x22m" id="kmPgTpl:svHd:r1:0:dc_m1::sDwnBg"><div id="kmPgTpl:svHd:r1:0:dc_m1::ScrollDown" class="x11s" style="display:none"><span class="x11t"></span></div></td></tr></table></div></td></tr></tbody></table></div><div id="kmPgTpl:svHd:r1:0:dc_mb1::eoi" class="xjw"><div id="kmPgTpl:svHd:r1:0:dc_mb1::eoc" class="xk9"></div></div></div><div class="xlu"></div></div><div style="display:none"><a id="kmPgTpl:svHd:r1:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></td><td valign="middle"><img id="kmPgTpl:svHd:s4" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td><td valign="middle"><img id="kmPgTpl:svHd:s2" src="/epmos/adf/images/t.gif" alt="" width="5" height="0px"></td><td valign="middle"><a id="kmPgTpl:svHd:cil1" title="Last Refreshed: 29-Oct-2018 16:43 GMT" class="xfd" onclick="return false;" href="#"><img id="kmPgTpl:svHd:cil1::icon" src="/epmos/common/images/email_16.png" title="Last Refreshed: 29-Oct-2018 16:43 GMT" alt="Last Refreshed: 29-Oct-2018 16:43 GMT" class="x137"><span class="x133">(0)</span></a></td><td valign="middle"><div id="kmPgTpl:svHd:p2" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:p2::content"></div></div></td><td valign="middle"><img id="kmPgTpl:svHd:s1" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td><td valign="middle"><a id="kmPgTpl:svHd:tc1:tccl1" class="xfe" style="display:none" onclick="return false;" href="#">a</a><div id="kmPgTpl:svHd:tc1:tcp1" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svHd:tc1:tcp1::content"></div></div></td><td valign="middle"><div id="kmPgTpl:svHd:mb1" class="x6e" style="overflow:hidden;"><div class="xde"><div id="kmPgTpl:svHd:mb1::oc" class="af_menuBar_content"><table cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td class="x11b"><div id="kmPgTpl:svHd:cni5a" class="x11l xds" _afrDth="1" _afrGrp="0"><div class="x12s" tabindex="0"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td></td><td class="x11c"><a onclick="return false" class="x11j" tabindex="-1" href="#">Contact Us</a></td><td></td></tr></table></div></div></td><td class="x11b"><div id="kmPgTpl:svHd:m1" class="x11d xdt" _afrDth="1" _afrGrp="0"><div class="x12q" tabindex="0"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td></td><td class="x11c"><a onclick="return false" class="x11h" tabindex="-1" href="#">Help</a></td><td><div class="x11p"></div></td></tr></table></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x11q" id="kmPgTpl:svHd:m1::menu"><tr><td class="x22l p_AFDisabled" id="kmPgTpl:svHd:m1::sUpBg"><div id="kmPgTpl:svHd:m1::ScrollUp" class="x11r p_AFDisabled" style="display:none"><span class="x11t"></span></div></td></tr><tr><td><div id="kmPgTpl:svHd:m1::ScrollBox" class="x12t"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" id="kmPgTpl:svHd:m1::ScrollContent" class="af_menu_scroll-content"><tr id="kmPgTpl:svHd:pgItem" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Viewing Documents</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr><td class="x11t"><div class="x12i"></div></td><td colspan="3"><hr id="kmPgTpl:svHd:sep9" class="x1j"></td></tr><tr id="kmPgTpl:svHd:gnItem" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Getting Started</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr id="kmPgTpl:svHd:gnItemj_id_1" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Troubleshooting</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr id="kmPgTpl:svHd:gnItemj_id_2" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Contact Oracle Global Customer Support</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr><tr id="kmPgTpl:svHd:gnItemj_id_3" class="x11l x11v" _afrDth="2" _afrGrp="0" tabindex="0"><td class="x121"><div class="x12v"></div></td><td class="x122">Table of Contents</td><td class="x123"><div class="x12v"></div></td><td class="x124"><div class="x12v"></div></td></tr></table></div></td></tr><tr><td class="x22m" id="kmPgTpl:svHd:m1::sDwnBg"><div id="kmPgTpl:svHd:m1::ScrollDown" class="x11s" style="display:none"><span class="x11t"></span></div></td></tr></table></div></td></tr></tbody></table></div><div id="kmPgTpl:svHd:mb1::eoi" class="xjw"><div id="kmPgTpl:svHd:mb1::eoc" class="xk9"></div></div></div><div class="xlu"></div></div></td></tr></tbody></table></div></div><div id="kmPgTpl:svCH:psl1" class="xpf">&nbsp;<div id="kmPgTpl:svCH:psl1::t" style="position:absolute;overflow:hidden;left:0px;top:0px;height:0px;right:0px"><div id="kmPgTpl:svCH:r1" class="xpg" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><div style="display:none"><a id="kmPgTpl:svCH:r1:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div></div></span></div><div id="kmPgTpl:pt_headerPs::s" class="xp4" style="position:static;border-width:0px"><div id="kmPgTpl:pt_psl1" class="xpf" style="width:auto;overflow:visible;height:auto"><div style="overflow:hidden"><div id="kmPgTpl:pt_psl1::c" style="overflow:hidden"><div id="kmPgTpl:pt_db8" class="x24a xpi" style="width:auto;overflow:visible;height:auto"><div style="height:26px"><div id="kmPgTpl:pt_db8::tl" style="position:absolute;overflow:hidden;top:0px;height:26px;left:0px;width:6px" class="xrw p_AFFlow"><span style="display:block;"></span></div><div id="kmPgTpl:pt_db8::t" style="position:absolute;overflow:hidden;left:6px;top:0px;right:6px;height:26px"><div style="position:absolute;left:0px;right:0px;top:0px;bottom:0px" class="xrx p_AFFlow"><span style="display:block;"></span></div></div><div id="kmPgTpl:pt_db8::t-i" class="xry" style="position:absolute;overflow:hidden;left:0px;right:0px;top:0px;height:26px"><div id="kmPgTpl:svMenu:ptpsl2" class="panelTabBckrnd xpf" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px">&nbsp;<div id="kmPgTpl:svMenu:ptpsl2::c" role="navigation" style="position:absolute;overflow:hidden;top:0px;left:0px;bottom:0px;right:0px"><div id="kmPgTpl:svMenu:np1" class="xdc xj5" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><div id="kmPgTpl:svMenu:np1::tabh" style="height:2em" _afrDisTab="kmPgTpl:svMenu:np1:1:cni1" class="xj6"><div class="xki"><div id="kmPgTpl:svMenu:np1::tabh::soi" class="xjn"><img src="/epmos/common/images/new/overflow_left.png" border="0"><div id="kmPgTpl:svMenu:np1::tabh::soc" class="xk4"></div></div><div id="kmPgTpl:svMenu:np1::tabh::oc" class="xji"><div id="kmPgTpl:svMenu:np1:0:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:0:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Dashboard</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:1:cni1" class="xfl p_AFSelected" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:1:cni1::disclosureAnchor" class="xzi p_AFSelected" href="#" onclick="return false;">Knowledge</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:2:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:2:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Service Requests</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:3:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:3:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Patches &amp; Updates</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:4:cni1" class="xfl" onclick="return false;" href="https://community.oracle.com/community/support?nodeId=itemNode_CommunityHome915781212" target="_blank"><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/offsite_ena.png"><a id="kmPgTpl:svMenu:np1:4:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Community</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:5:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:5:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Certifications</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:6:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:6:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Systems</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:7:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:7:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Collector</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:8:cni1" class="xfl" onclick="return false;" href="https://advancedsupport.oracle.com?nodeId=itemNode_AcsLink915781212" target="_blank"><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/offsite_ena.png"><a id="kmPgTpl:svMenu:np1:8:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Advanced Customer Services</a></div><div class="xze" style="height:2em"></div></div><div id="kmPgTpl:svMenu:np1:9:cni1" class="xfl" onclick="return false;" target=""><div class="xzd" style="height:2em"></div><div class="xzf" style="height:2em"><img alt="" border="0" style="padding-right:5px;" class="xiw" src="/epmos/common/images/blank.gif"><a id="kmPgTpl:svMenu:np1:9:cni1::disclosureAnchor" class="xzi" href="#" onclick="return false;">Settings</a></div><div class="xze" style="height:2em"></div></div></div><div id="kmPgTpl:svMenu:np1::tabh::eoi" class="xjr"><img src="/epmos/common/images/new/overflow_right_EN.png" border="0"><div id="kmPgTpl:svMenu:np1::tabh::eoc" class="xk4"></div></div></div><div class="x1bd"></div></div></div></div><div id="kmPgTpl:svMenu:ptpsl2::r" role="search" style="position:absolute;overflow:hidden;top:0px;right:0px;bottom:0px"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svMenu:gsb:pt_pgl1" class="x2a3 x1a"><tbody><tr><td><span style="display:none"></span></td><td><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svMenu:gsb:pgl1" class="x1a"><tbody><tr><td width="100%"></td><td><button id="kmPgTpl:svMenu:gsb:dc_cb1" class="x23s x7j" onclick="return false;" title="Favorites"><img src="/epmos/common/images/favorites_qualifier_arrow.png" title="Favorites" alt="Favorites" class="xf7"></button></td><td><div id="kmPgTpl:svMenu:gsb:fm1" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svMenu:gsb:fm1::content"></div></div></td><td><div id="kmPgTpl:svMenu:gsb:fm2" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svMenu:gsb:fm2::content"></div></div></td></tr></tbody></table></td><td><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svMenu:gsb:pgl_srcs" class="x1a"><tbody><tr><td><button id="kmPgTpl:svMenu:gsb:cb1" class="x23v x7j" onclick="return false;" title="Recent Searches"><img src="/epmos/ui/images/recent_searches_menuarrow_global.png" title="Recent Searches" alt="Recent Searches" class="xf7"></button></td><td><div id="kmPgTpl:svMenu:gsb:p1" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svMenu:gsb:p1::content"></div></div></td></tr></tbody></table></td><td><input type="hidden" id="kmPgTpl:svMenu:gsb:sel_srcG" name="kmPgTpl:svMenu:gsb:sel_srcG" value="Search Knowledge Base"></td><td><input type="hidden" id="kmPgTpl:svMenu:gsb:srchTG" name="kmPgTpl:svMenu:gsb:srchTG"></td><td><input type="hidden" id="kmPgTpl:svMenu:gsb:selSrcShNaG" name="kmPgTpl:svMenu:gsb:selSrcShNaG" value="KB"></td><td><input type="hidden" id="kmPgTpl:svMenu:gsb:selSrcG" name="kmPgTpl:svMenu:gsb:selSrcG"></td><td><input type="hidden" id="kmPgTpl:svMenu:gsb:srcCntG" name="kmPgTpl:svMenu:gsb:srcCntG" value=""></td><td><table class="x1u" style="display:none" id="kmPgTpl:svMenu:gsb:clickStreamParameters" cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td class="xu"><label for="kmPgTpl:svMenu:gsb:clickStreamParameters::content">Selected Source</label></td><td valign="top" nowrap class="xpu"><input id="kmPgTpl:svMenu:gsb:clickStreamParameters::content" name="kmPgTpl:svMenu:gsb:clickStreamParameters" class="x25" type="text"></td></tr></tbody></table></td><td><table id="kmPgTpl:svMenu:gsb:subFgsb:pt_tl2" cellpadding="0" cellspacing="0" border="0" summary=""><tr id="kmPgTpl:svMenu:gsb:subFgsb:pt_rl21"><td id="kmPgTpl:svMenu:gsb:subFgsb:pt_cf211"><span id="kmPgTpl:svMenu:gsb:subFgsb:pt_hiddenLabel" class="xq" style="position:absolute; top:-999px"><label for="kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG::content">Global Search</label></span><span id="kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG" class="x23o x1u"><input id="kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG::content" name="kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG" style="width:auto" class="x25" size="50" type="text" value=""></span></td><td id="kmPgTpl:svMenu:gsb:subFgsb:pt_cf212"><a id="kmPgTpl:svMenu:gsb:subFgsb:menu_pt_cil2" title="Global Search" class="x23y xfd" onclick="return false;" href="#"><img id="kmPgTpl:svMenu:gsb:subFgsb:menu_pt_cil2::icon" src="/epmos/common/images/searchiconbutton.gif" title="Global Search" alt="Global Search" class="x137"></a></td><td id="kmPgTpl:svMenu:gsb:subFgsb:cf1"></td></tr></table></td><td><img id="kmPgTpl:svMenu:gsb:s1" src="/epmos/adf/images/t.gif" alt="" width="5" height="10"></td><td><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:svMenu:gsb:pgl_adv" class="x1a"><tbody><tr></tr></tbody></table></td></tr></tbody></table></div></div></div><div id="kmPgTpl:pt_db8::tr" style="position:absolute;overflow:hidden;top:0px;height:26px;right:0px;width:6px" class="xrz p_AFFlow"><span style="display:block;"></span></div></div><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" style="table-layout:fixed"><tbody><tr><td id="kmPgTpl:pt_db8::l" style="display:table-cell;width:6px" class="xs0 p_AFFlow"><span style="display:block;"></span></td><td style="display:table-cell;width:100%" id="kmPgTpl:pt_db8::c"><div style="position:relative" class="xs1 p_AFFlow"><div style="position:relative"><div id="kmPgTpl:pt_psl3" class="centerContainer xpf" style="width:auto;overflow:visible;height:auto"><div id="kmPgTpl:pt_psl3::t" style="position:relative;overflow:hidden;width:100%"><div id="kmPgTpl:pgHeader" class="x1a"><div><table id="kmPgTpl:tl1" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr id="kmPgTpl:tr1" valign="top"><td id="kmPgTpl:tc1" align="left" valign="top" width="30%"><div id="kmPgTpl:pglt2" class="x1a"><div><span id="kmPgTpl:svBC:pglbc" class="x1a"></span></div><div><span id="kmPgTpl:pglt3" class="x1a"><table id="kmPgTpl:overTitle:tl1" class="xpj" cellpadding="0" cellspacing="0" border="0" summary=""><tr id="kmPgTpl:overTitle:rl1"><td id="kmPgTpl:overTitle:cf1" align="left"><div id="kmPgTpl:overTitle:pgl1" class="x1a"><div><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:overTitle:pgl2" class="x1a"><tbody><tr><td><div id="kmPgTpl:overTitle:ot1" class="x29q x6v"><table class="xtx" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xue">&nbsp;</td><td class="xve"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x22o"></td><td id="kmPgTpl:overTitle:ot1::_afrTtxt"><div title=" " class="xu2"><h1 class="xdl "> </h1></div></td><td id="kmPgTpl:overTitle:ot1::_afrEps"><div class="xdl  xw8" style="display: none" title=" ">&#8230;</div></td><td id="kmPgTpl:overTitle:ot1::_afrStr" style="width: 100%"></td></tr></table></td><td class="xuw">&nbsp;</td></tr></table><div class="xwb"><div></div></div></div></td></tr></tbody></table></div><div><div id="kmPgTpl:overTitle:s2" style="margin-top:2px"></div></div></div></td></tr></table></span></div></div></td><td id="kmPgTpl:tc2" align="right" valign="top" width="70%"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:pt_pgl4" class="x1a" style="white-space: nowrap"><tbody><tr><td valign="top"><div id="kmPgTpl:pt_pgl5" class="x1a" style="white-space: nowrap"><div><div id="kmPgTpl:pt_s1" style="margin-top:6px"></div></div><div><a id="kmPgTpl:svSurvey:gl1" title="Provide feedback for the features on this page" class="padding-left: 12px; padding-right: 12px xfu" href="javascript:var newWin = window.open('https%3A%2F%2Fora-gcp1.custhelp.com%2Fci%2Fdocuments%2Fdetail%2F5%2F1046%2F12%2F742014625729a6c0d41118e1a8a926dbebf67a0c%3Fuser%3DMARK.EVA%40FIVIUM.CO.UK%26uID%3D6B6CE4815DBA6176E050E60AD27F53A2%26fID%3Du0bpuefojk2grnt%26cua%3Dfalse%26page%3DDocumentDisplay','feedbackWindow','width=630, height=600, location=no,resizable=yes,scrollbars=yes,status=no,left='+getLeftOffset(630)+',top='+getTopOffset(600)+'','true');" target="_self">Give Feedback...</a></div></div></td><td valign="top"><div id="kmPgTpl:pt_pgl6" class="x1a" style="white-space: nowrap"><div><div id="kmPgTpl:pt_s2" style="margin-top:1px"></div></div><div><div id="kmPgTpl:svMsg:mosMsgA" class="x1a"><div><div id="kmPgTpl:svMsg:msgAsPop" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:svMsg:msgAsPop::content"></div></div></div></div></div></div></td></tr></tbody></table></td><td id="kmPgTpl:tc3" align="right" valign="top" width="0%"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:pglt4" class="x1a" style="white-space: nowrap"><tbody><tr><td valign="top"><img id="kmPgTpl:splt1a" src="/epmos/adf/images/t.gif" alt="" width="12px" height="0px"></td><td valign="top"><div id="kmPgTpl:pglt5" class="x1a" style="white-space: nowrap"><div><div id="kmPgTpl:splt1b" style="margin-top:6px"></div></div><div><a id="kmPgTpl:cl1" class="padding-left: 12px; padding-right: 12px xfe" style="display:none" onclick="return false;" href="#">Customize Page...</a></div></div></td><td valign="top"><img id="kmPgTpl:splt1c" src="/epmos/adf/images/t.gif" alt="" width="12px" height="0px"></td></tr></tbody></table></td></tr><tr id="kmPgTpl:pt_rl1" valign="top"><td id="kmPgTpl:pt_cf1" colspan="3"></td></tr></table></div></div></div><div style="overflow:hidden"><div id="kmPgTpl:pt_psl3::c" style="overflow:hidden"><div id="kmPgTpl:pageCustomizable1" class="x1do" style=""><div id="kmPgTpl:pageCustomizable1::c"><div id="kmPgTpl:pslMain" class="xpj xpf" style="width:auto;overflow:visible;height:auto"><div style="overflow:hidden"><div id="kmPgTpl:pslMain::c" style="overflow:hidden"><div id="kmPgTpl:pt_pgl1" class="x1a"><div><div id="kmPgTpl:psl1" class="xpf" style="width:auto;overflow:visible;background-color:White;;height:auto"><div style="overflow:hidden"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" style="table-layout:fixed"><tbody><tr><td valign="top" style="width:10px"><div id="kmPgTpl:psl1::l" style="overflow:hidden"><img id="kmPgTpl:s1" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></div></td><td valign="top"><div id="kmPgTpl:psl1::c" style="overflow:hidden"><div id="kmPgTpl:r1" class="xpg"><div id="kmPgTpl:r1:0:docMainPanel" class="x1a"><div><span class="xq1">Copyright (c) 2018, Oracle. All rights reserved. Oracle Confidential.</span></div><div><img id="kmPgTpl:r1:0:s5cc" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"></div><div><span style="display:none">9876</span></div><div><div id="kmPgTpl:r1:0:psl1" class="xpj kmDocBorderExternal xpf" style="width:auto;overflow:visible;height:auto"><div id="kmPgTpl:r1:0:psl1::t" style="position:relative;overflow:hidden;width:100%"><div id="kmPgTpl:r1:0:pgl14" class="x1a"><div><img id="kmPgTpl:r1:0:s111" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></div><div><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:Headpgl" class="x1a"><tbody><tr><td><div id="kmPgTpl:r1:0:ph22" class="x6v" style="display:none"><table class="xtx" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xue">&nbsp;</td><td class="xve"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x22o"></td><td id="kmPgTpl:r1:0:ph22::_afrTtxt"><div title="Doc ID " class="xu2"><h1 class="xdl ">Doc ID </h1></div></td><td id="kmPgTpl:r1:0:ph22::_afrEps"><div class="xdl  xw8" style="display: none" title="Doc ID ">&#8230;</div></td><td id="kmPgTpl:r1:0:ph22::_afrStr" style="width: 100%"></td></tr></table></td><td class="xuw">&nbsp;</td></tr></table><div class="xwb"><div></div></div></div></td></tr></tbody></table></div><div><table id="kmPgTpl:r1:0:tl5" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr id="kmPgTpl:r1:0:rl12"><td id="kmPgTpl:r1:0:cf41" align="left" width="10"><div id="kmPgTpl:r1:0:srFavorite" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:r1:0:srFavorite::content"></div></div><a id="kmPgTpl:r1:0:cil4" title="Click to add to Favorites" class="xfd" onclick="return false;" href="#"><img id="kmPgTpl:r1:0:cil4::icon" src="/epmos/common/images/favorites_qualifier_notsel.png" title="Click to add to Favorites" alt="Click to add to Favorites" class="x137"></a><span id="kmPgTpl:r1:0:pglhts1" class="x1a"><div id="kmPgTpl:r1:0:sug1:sggstrpp" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:r1:0:sug1:sggstrpp::content"></div></div><span id="kmPgTpl:r1:0:sug1:pglcl" class="x1a"></span></span><div id="kmPgTpl:r1:0:sug2:sggstrpp" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:r1:0:sug2:sggstrpp::content"></div></div><span id="kmPgTpl:r1:0:sug2:pglcl" class="x1a"></span></td><td id="kmPgTpl:r1:0:cf40" width="10"><img id="kmPgTpl:r1:0:s13" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"></td><td id="kmPgTpl:r1:0:cf49" align="left"><span id="kmPgTpl:r1:0:ol22" class="xq" style="font-weight:bold;color:Black;font-size:130%"><label>Master Note for Database Proactive Patch Program (Doc ID 756671.1)</label></span></td><td id="kmPgTpl:r1:0:cf48" align="right"><a id="kmPgTpl:r1:0:toBottom" title="To Bottom" class="xfd" style="text-decoration:none" onclick="return false;" href="#"><img id="kmPgTpl:r1:0:toBottom::icon" src="/epmos/ui/images/quicklink_smlarrowdown_enabled.gif" title="To Bottom" alt="To Bottom" class="x137"><span class="x133">To Bottom</span></a></td><td id="kmPgTpl:r1:0:cf50"><img id="kmPgTpl:r1:0:s6" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></td></tr></table></div><div><hr id="kmPgTpl:r1:0:s4" class="x1j"></div></div></div><div style="overflow:hidden"><div id="kmPgTpl:r1:0:psl1::c" style="overflow:hidden"><div id="kmPgTpl:r1:0:kmDocPanel" class="xpj x1a" style="width:100%;height:100%;overflow:auto;"><div><img id="kmPgTpl:r1:0:s23" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></div><div><table id="kmPgTpl:r1:0:tl7" style="table-layout:fixed; overflow:hidden;" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr id="kmPgTpl:r1:0:rl14"><td id="kmPgTpl:r1:0:cf54" style="overflow:hidden; vertical-align:top;"><div id="kmPgTpl:r1:0:pgl25" class="x1a" style="overflow:auto;"><div><span id="kmPgTpl:r1:ot71" class="kmContent" style="font-size:small; color:Black;"><!-- class=km before applies to --><H2 class=km>Applies to:  </H2>
+Oracle Database Cloud Service - Version N/A and later<br />Oracle Database Exadata Cloud Machine - Version N/A and later<br />Oracle Database Cloud Schema Service - Version N/A and later<br />Oracle Cloud Infrastructure - Database Service - Version N/A and later<br />Oracle Database Backup Service - Version N/A and later<br />Information in this document applies to any platform.<br />
+
+<H2 class=km><A NAME="ANN_DETAILS"></A>Details</H2>
+<style type="text/css"><!--
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+.red {
+	color: #F00;
+}
+--></style>
+<p>&nbsp;</p>
+<p></p>
+<p>&nbsp;</p>
+<a name="aref_section11"></a><h2 class="km">1.0 OVERVIEW</h2>
+<p>Oracle provides Database patches for both proactive and reactive maintenance:</p>
+<ul type="disc">
+<li>Reactive Patches:</li>
+<ul type="circle">
+<li>are usually delivered as &ldquo;Interim Patches&rdquo;</li>
+<li>were historically known as &ldquo;one-off&rdquo; patches</li>
+<li>are provided on demand for a given &ldquo;defect, version, platform&rdquo; combination</li>
+<li>go through basic sanity tests</li>
+<li>fixes will usually be included in the next relevant Patch Set Release</li>
+</ul>
+</ul>
+<ul type="disc">
+<li>Proactive Patches</li>
+<ul type="circle">
+<li>address high impact bugs that affect a given configuration</li>
+<li>contain proven low risk fixes</li>
+<li>go through extra levels of testing, determined by the feature(s) affected</li>
+<li>are available on "My Oracle Support" by clicking on the "Patches &amp; Updates" tab</li>
+</ul>
+</ul>
+<p>For more information on Database Patch Delivery Methods see "Oracle Database - Overview of Database Patch Delivery Methods - 12.1.0.2 and older", <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1962125.1'>Note 1962125.1</a> and "Oracle Database - Overview of Database Patch Delivery Methods for 12.2.0.1 and greater", <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2337415.1'>Note 2337415.1</a> <br /> Oracle releases multiple types of Database patches for the Database and Clusterware installations:</p>
+<ol>
+<li>Quarterly Release Updates (Updates) and Quarterly Release Update Revisions (Revisions) - Applies to Database 12.2.0.1 and later</li>
+<li>Quarterly Patch Set Updates (PSUs) and Quarterly Proactive Bundle Patches (BPs) - Applies to Database 12.1.0.2 and prior</li>
+<li>One-off Patches - Applies to all Database versions</li>
+</ol>
+<p>The Database PSU is available for Database installations and the Grid Infrastructure (GI) PSU / Database Proactive BP for Clusterware installations for Database 12.1.0.2 and prior. Starting with Database 12.2.0.1, the Quarterly Release Updates (Updates) will replace Bundle patches and Quarterly Release Update Revisions (Revisions) will replace the PSU's to improve the quality and experience of proactive maintenance. <br /> For more information on Database Release Update (Update) and Release Update Revision (Revision) see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2285040.1'>Note 2285040.1</a> Release Update Introduction and FAQ.</p>
+<p>These patches are released quarterly (Jan, Apr, Jul, Oct). There may be Monthly updates released in the first few months of a new release to accelerate stabilization.</p>
+<p>Customers can get standalone one-off patches and diagnostic patches as Oracle has delivered for many years for Update, Revision, PSU or BP. Emergency patches will be delivered on request on top of any Updates or Revisions or PSUs or BPs for a supported release as long as technically feasible. If a fix has severe impact or issue is encountered by many customers, then fix will be considered for inclusion into the various bundles. Customers should update to the latest bundle that includes their emergency fix once it is available.</p>
+<p>&nbsp;</p>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<a name="aref_section12"></a><h3 class="km"><a name="mozTocId773320" class="mozTocH3"></a><span class="secnum">1.1</span> Oracle Database Patching - SPU vs PSU/BP</h3>
+The Database Security Patch Updates (SPU) and Patch Set Updates (PSU) / Bundle Patches (BP) that are released each quarter contain the same security fixes. However, they use different patching mechanisms, and PSU/BP include both security and critical fixes.<br /> <br /> For more information on Database Patch Delivery Methods see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1962125.1'>Note 1962125.1</a>, Oracle Database - Overview of Database Patch Delivery Methods - 12.1.0.2 and older.
+<p style="font-weight: bold;">NOTE: Applying a SPU on an installation with an installed PSU/BP is not supported</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="sect2">
+<a name="aref_section13"></a><h3 class="km"><a name="mozTocId514688" class="mozTocH3"></a>1.2 OJVM PSU can be installed in "Conditional Rolling Install" manner in certain use cases</h3>
+<p>Starting in January 2017, the OJVM PSU for 12.1.0.2 and 11.2.0.4 may be installed in a "Conditional Rolling Install" fashion for the following use cases:<br /> <br /> &nbsp;&nbsp;* No OJVM usage<br /> &nbsp;&nbsp;* OJVM used by non-critical jobs and programs<br /> &nbsp;&nbsp;* OJVM used by critical functions isolated as services<br /> &nbsp;&nbsp;* OJVM used extensively, not isolated, and downtime is tolerated<br /> &nbsp;&nbsp;* OJVM used by critical functions and minimal downtime is required<br /> <br /> See My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2217053.1'>Note 2217053.1</a> for more details.</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="sect2">
+<a name="aref_section14"></a><h3 class="km"><a name="mozTocId267914" class="mozTocH3"></a><span class="secnum">1.3</span> Proactive Replacement Interim Patches for Conflicts with Database Proactive Patches</h3>
+<p>So that customers can quickly consume new quarterly Database Proactive Patches, Oracle determines any existing interim patches that conflict with the new proactive patches, and generates replacement interim patches as needed.</p>
+<p>For more information, see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1998563.1'>Note 1998563.1</a> Proactive Replacement Interim Patches for Conflicts with Database Proactive Patches.</p>
+<p>&nbsp;</p>
+<a name="aref_section15"></a><h4 class="km">1.3.1 Some Database Proactive Interim patches for Oct2018 delayed and will be available by 31-Oct-2018</h4>
+<p>While the goal is for all proactive interim patches to be available on the release date, some interim patches are delayed for October 2018. The current estimate is that all of them will be available by 31-Oct-2018. We will update this note as interim patches are completed for each version.</p>
+</div>
+<a name="aref_section16"></a><h2 class="km">2.0 What's New</h2>
+<a name="aref_section17"></a><h3 class="km">2.1 Bug fixes that may change an existing Optimizer execution plan</h3>
+<p>Beginning with database version 12.2.0.1 and beyond, database Bug fixes that may change an existing Optimizer execution plan will be delivered with the Bug fix disabled by default. Such fixes will have to be explicitly enabled after the patch has been applied. Details on this, including the commands to explicitly enable such Bug fixes are presented in MOS <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2147007.1'>Note 2147007.1</a>.</p>
+<a name="aref_section18"></a><h2 class="km">3.0 Post Release Patches</h2>
+<p>Oracle strives to complete preparations and testing of each database Quarterly Security Patch for each platform by the quarterly release date. Occasionally, circumstances beyond our control dictate that a particular database patch be delayed and be released a few days after the quarterly release date. The following table lists any current database patch delays and the estimated date of availability.</p>
+<table border="1" rules="all" cellspacing="0" cellpadding="3">
+<tbody>
+<tr><th scope="col">Patch</th><th scope="col">Patch Number</th><th scope="col">Platform</th><th scope="col">Availability</th></tr>
+<tr>
+<td>DB Oct 2018 18.4.0 Update</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28655784' target='_blank' >Patch 28655784</a></td>
+<td>All</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI Oct 2018 18.4.0 Update</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28659165' target='_blank' >Patch 28659165</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI Oct 2018 18.4.0 Update</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28659165' target='_blank' >Patch 28659165</a></td>
+<td>All except Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td><span id="kmPgTpl:r1:ot3">Combo OJVM Update 18.4.0 and GI Update 18.4.0</span></td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689122' target='_blank' >Patch 28689122</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI Oct 2018 12.2.0.1.181016 Update</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28714316' target='_blank' >Patch 28714316</a></td>
+<td>All except AIX (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI Oct 2018 12.2.0.1.181016 Update</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28714316' target='_blank' >Patch 28714316</a></td>
+<td>AIX (64-Bit)</td>
+<td>ETA: 30-October-2018</td>
+</tr>
+<tr>
+<td>GI Apr 2018 12.2.0.1.181016 Revision</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507711' target='_blank' >Patch 28507711</a></td>
+<td>AIX (64-Bit), HP-UX Itanium (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI Jul 2018 12.2.0.1.181016 Revision</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507693' target='_blank' >Patch 28507693</a></td>
+<td>All</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>DB Proactive BP 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28349951' target='_blank' >Patch 28349951</a></td>
+<td>HP-UX Itanium (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>DB PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28204707' target='_blank' >Patch 28204707</a></td>
+<td>All except HP-UX PA-RISC (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>DB PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28204707' target='_blank' >Patch 28204707</a></td>
+<td>HP-UX PA-RISC (64-Bit)</td>
+<td>ETA: 30-October-2018</td>
+</tr>
+<tr>
+<td>GI PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28429134' target='_blank' >Patch 28429134</a></td>
+<td>All except HP-UX PA-RISC (64-Bit), AIX (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>GI PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28429134' target='_blank' >Patch 28429134</a></td>
+<td>HP-UX PA-RISC (64-Bit), AIX (64-Bit)</td>
+<td>ETA: 30-October-2018</td>
+</tr>
+<tr>
+<td><span id="kmPgTpl:r1:ot71">DB SPU 11.2.0.4.181016</span></td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28364007' target='_blank' >Patch 28364007</a></td>
+<td>All except HP-UX PA-RISC (64-Bit)</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>DB SPU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28364007' target='_blank' >Patch 28364007</a></td>
+<td>HP-UX PA-RISC (64-Bit)</td>
+<td>ETA: 30-October-2018</td>
+</tr>
+<tr>
+<td><span id="kmPgTpl:r1:ot2">Combo OJVM PSU 11.2.0.4.181016 &amp; DB SPU 11.2.0.4.181016</span></td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689160' target='_blank' >Patch 28689160</a></td>
+<td>All</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Exadata DB BP 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28462975' target='_blank' >Patch 28462975</a></td>
+<td>All</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 18.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689211' target='_blank' >Patch 28689211</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 18.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689211' target='_blank' >Patch 28689211</a></td>
+<td>Solaris.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 12.2.0.1</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689205' target='_blank' >Patch 28689205</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 12.2.0.1</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689205' target='_blank' >Patch 28689205</a></td>
+<td>Solaris.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 12.1.0.2</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689198' target='_blank' >Patch 28689198</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 12.1.0.2</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689198' target='_blank' >Patch 28689198</a></td>
+<td>Solaris.x86-64</td>
+<td><span id="kmPgTpl:r1:ot4">ETA: 30-October-2018</span></td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 11.2.0.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689181' target='_blank' >Patch 28689181</a></td>
+<td>Linux.x86-64</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>QFSDP for Exadata (Oct2018) 11.2.0.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689181' target='_blank' >Patch 28689181</a></td>
+<td>Solaris.x86-64</td>
+<td>ETA: 30-October-2018</td>
+</tr>
+<tr>
+<td>QFSDP for Supercluster (Oct2018) 18.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689213' target='_blank' >Patch 28689213</a></td>
+<td>Solaris SPARC (64-Bit)</td>
+<td>ETA: 13-November-2018</td>
+</tr>
+<tr>
+<td>QFSDP for Supercluster (Oct2018) 12.2.0.1</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689209' target='_blank' >Patch 28689209</a></td>
+<td>Solaris.SPARC (64-Bit)</td>
+<td>ETA: 13-November-2018</td>
+</tr>
+<tr>
+<td>QFSDP for Supercluster (Oct2018) 12.1.0.2</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689203' target='_blank' >Patch 28689203</a></td>
+<td>Solaris.SPARC (64-Bit)</td>
+<td>ETA: 13-November-2018</td>
+</tr>
+<tr>
+<td>QFSDP for Supercluster (Oct2018) 11.2.0.4</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689189' target='_blank' >Patch 28689189</a></td>
+<td>Solaris.SPARC (64-Bit)</td>
+<td>ETA: 13-November-2018</td>
+</tr>
+</tbody>
+</table>
+<a name="aref_section19"></a><h2 class="km">4.0 Current patches</h2>
+<p>The following tables are a complete listing of the latest available RDBMS Database Patchsets and Release Updates. See the patch readmes for patch install instructions</p>
+<p>&nbsp;</p>
+<a name="aref_section110"></a><h3 class="km">4.1 Database 18</h3>
+<p>This table only contains patch information from the most recently available Release Update (Update) and Release Update Revision (Revision). For information on historical patches, please see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2369376.1'>Note 2369376.1</a> Database 18 Proactive Patch Information.</p>
+<table border="1" rules="all" cellspacing="0" cellpadding="3">
+<tbody>
+<tr><th scope="col">Date Published</th><th scope="col">Version</th><th scope="col">Patch Number</th><th scope="col">Name</th><th scope="col">Known Issues</th><th scope="col">Bugs Fixed List</th><th scope="col">Comments</th></tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689117' target='_blank' >Patch 28689117</a></td>
+<td>Combo Of OJVM Update 18.4.0 + DB Update 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2369471.1'>Note 2369471.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689122' target='_blank' >Patch 28689122</a></td>
+<td>Combo Of OJVM Update 18.4.0 + GI Update 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2384954.1'>Note 2384954.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28655784' target='_blank' >Patch 28655784</a></td>
+<td>Database Release Update 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>
+<p><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2369471.1'>Note 2369471.1</a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.3.1</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507480' target='_blank' >Patch 28507480</a></td>
+<td>Database Release Update Revision 18.3.1</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.2.2</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28601267' target='_blank' >Patch 28601267</a></td>
+<td>Database Release Update Revision 18.2.2</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28659165' target='_blank' >Patch 28659165</a></td>
+<td>Grid Infrastructure Release Update 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2384954.1'>Note 2384954.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.3.1</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28660077' target='_blank' >Patch 28660077</a></td>
+<td>Grid Infrastructure Release Update Revision 18.3.1</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.2.2</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28702032' target='_blank' >Patch 28702032</a></td>
+<td>Grid Infrastructure Release Update Revision 18.2.2</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28502229' target='_blank' >Patch 28502229</a> (Unix)</p>
+</td>
+<td>OJVM Release Update 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689211' target='_blank' >Patch 28689211</a></td>
+<td>Quarterly Full Stack download for Exadata BP 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>18.4.0</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689213' target='_blank' >Patch 28689213</a></td>
+<td>Quarterly Full Stack download for SuperCluster BP 18.4.0</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433586.1'>Note 2433586.1</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<a name="aref_section111"></a><h3 class="km">4.2 Database 12.2.0.1</h3>
+<p>This table only contains patch information from the most recently available Release Update (Update) and Release Update Revision (Revision). For information on historical patches, please see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2285557.1'>Note 2285557.1</a> Database 12.2.0.1 Proactive Patch Information.</p>
+<table border="1" rules="all" cellspacing="0" cellpadding="3">
+<tbody>
+<tr><th scope="col">Date Published</th><th scope="col">Version</th><th scope="col">Patch Number</th><th scope="col">Name</th><th scope="col">Known Issues</th><th scope="col">Bugs Fixed List</th><th scope="col">Comments</th></tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689128' target='_blank' >Patch 28689128</a></td>
+<td>Combo Of OJVM Update Component 12.2.0.1.181016 + DB Update 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245178.1'>Note 2245178.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689130' target='_blank' >Patch 28689130</a></td>
+<td>Combo Of OJVM Update Component 12.2.0.1.181016 + GI Update 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245185.1'>Note 2245185.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28662603' target='_blank' >Patch 28662603</a></td>
+<td>Database Release Update 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>
+<p><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245178.1'>Note 2245178.1</a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507749' target='_blank' >Patch 28507749</a></td>
+<td>Database Apr2018 Release Update Revision 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>second Revision for the Apr Update</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507553' target='_blank' >Patch 28507553</a></td>
+<td>Database Jul2018 Release Update Revision 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>first Revision for the Jul Update</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28714316' target='_blank' >Patch 28714316</a></td>
+<td>Grid Infrastructure Release Update 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245185.1'>Note 2245185.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507711' target='_blank' >Patch 28507711</a></td>
+<td>Grid Infrastructure Apr2018 Release Update Revision 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>second Revision for the Apr Update</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28507693' target='_blank' >Patch 28507693</a></td>
+<td>Grid Infrastructure Jul2018 Release Update Revision 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>first Revision for the Jul Update</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28440725' target='_blank' >Patch 28440725</a> (Unix)</p>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28412312' target='_blank' >Patch 28412312</a> (Windows)</p>
+</td>
+<td>OJVM Release Update 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28574555' target='_blank' >Patch 28574555</a></td>
+<td>Windows DB Bundle Patch 12.2.0.1.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td>README file section "Bugs Fixed by This Patch"</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689205' target='_blank' >Patch 28689205</a></td>
+<td>Quarterly Full Stack download for Exadata (Oct2018) BP 12.2.0.1</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245135.1'>Note 2245135.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.2.0.1.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689209' target='_blank' >Patch 28689209</a></td>
+<td>Quarterly Full Stack download for SuperCluster (Oct2018) BP 12.2.0.1</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433588.1'>Note 2433588.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2245135.1'>Note 2245135.1</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<a name="aref_section112"></a><h3 class="km">4.3 Database 12.1.0.2</h3>
+<p>This table only contains patch information from the most recently available Patch Set Update (PSU) and Bundle Patch (BP). For information on historical patches, please see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2285558.1'>Note 2285558.1</a> Database 12.1.0.2 Proactive Patch Information.</p>
+<table border="1" rules="all" cellspacing="0" cellpadding="3">
+<tbody>
+<tr><th scope="col">Date Published</th><th scope="col">Version</th><th scope="col">Patch Number</th><th scope="col">Name</th><th scope="col">Known Issues</th><th scope="col">Bugs Fixed List</th><th scope="col">Comments</th></tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689151' target='_blank' >Patch 28689151</a></td>
+<td>Combo OJVM PSU 12.1.0.2.181016 and Database Proactive BP 12.1.0.2.181016</td>
+<td>See separate KIs below</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1937782.1'>Note 1937782.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689146' target='_blank' >Patch 28689146</a></td>
+<td>Combo OJVM PSU 12.1.0.2.181016 and Database PSU 12.1.0.2.181016</td>
+<td>See separate KIs below</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1924126.1'>Note 1924126.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689148' target='_blank' >Patch 28689148</a></td>
+<td>Combo Of OJVM Component 12.1.0.2.181016 DB PSU + GI PSU 12.1.0.2.181016</td>
+<td>See separate KIs below</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1928853.1'>Note 1928853.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28349951' target='_blank' >Patch 28349951</a></td>
+<td>Database Proactive Bundle Patch 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433631.1'>Note 2433631.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1937782.1'>Note 1937782.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28259833' target='_blank' >Patch 28259833</a></td>
+<td>Database PSU 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433589.1'>Note 2433589.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1924126.1'>Note 1924126.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28349311' target='_blank' >Patch 28349311</a></td>
+<td>GI PSU 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433608.1'>Note 2433608.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1928853.1'>Note 1928853.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28440711' target='_blank' >Patch 28440711</a> - Unix</p>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28412299' target='_blank' >Patch 28412299</a> - Windows</p>
+</td>
+<td>Oracle JavaVM Component Database PSU 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433602.1'>Note 2433602.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28563501' target='_blank' >Patch 28563501</a></td>
+<td>Microsoft Windows 32-Bit and x86-64 BP 12.1.0.2.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2003221.1'>Note 2003221.1</a></td>
+<td>README file section "Bugs Fixed by This Patch"</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689198' target='_blank' >Patch 28689198</a></td>
+<td>Quarterly Full Stack download for Exadata (Oct2018) BP 12.1.0.2</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433633.1'>Note 2433633.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1937782.1'>Note 1937782.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>12.1.0.2.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689203' target='_blank' >Patch 28689203</a></td>
+<td>Quarterly Full Stack download for SuperCluster (Oct2018) BP 12.1.0.2</td>
+<td>Will be updated when available</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1937782.1'>Note 1937782.1</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<a name="aref_section113"></a><h3 class="km">4.4 Database 11.2.0.4</h3>
+<p>This table only contains patch information from the most recently available Security Patch Update (SPU) and Patch Set Update (PSU). For information on historical patches, please see My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2285559.1'>Note 2285559.1</a> Database 11.2.0.4 Proactive Patch Information.</p>
+<table border="1" rules="all" cellspacing="0" cellpadding="3">
+<tbody>
+<tr><th scope="col">Date Published</th><th scope="col">Version</th><th scope="col">Patch Number</th><th scope="col">Name</th><th scope="col">Known Issues</th><th scope="col">Bugs Fixed List</th><th scope="col">Comments</th></tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689165' target='_blank' >Patch 28689165</a></td>
+<td>Combo OJVM PSU 11.2.0.4.181016 and Database PSU 11.2.0.4.181016</td>
+<td>See separate KIs below</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1611785.1'>Note 1611785.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689160' target='_blank' >Patch 28689160</a></td>
+<td>Combo OJVM PSU 11.2.0.4.181016 (CPUOct2018) and Database SPU 11.2.0.4.181016 (CPUOct2018)</td>
+<td>See separate KIs below</td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689170' target='_blank' >Patch 28689170</a></td>
+<td>Combo OJVM PSU 11.2.0.4.181016 and GI PSU 11.2.0.4.181016</td>
+<td>See separate KIs below</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1614046.1'>Note 1614046.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28204707' target='_blank' >Patch 28204707</a></td>
+<td>Database PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433590.1'>Note 2433590.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1611785.1'>Note 1611785.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28429134' target='_blank' >Patch 28429134</a></td>
+<td>GI PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433610.1'>Note 2433610.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1614046.1'>Note 1614046.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28364007' target='_blank' >Patch 28364007</a></td>
+<td>Database SPU 11.2.0.4.181016 (CPUOct2018)</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433632.1'>Note 2433632.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28440700' target='_blank' >Patch 28440700</a> - Unix</p>
+<p><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28412269' target='_blank' >Patch 28412269</a> - Windows</p>
+</td>
+<td>Oracle JavaVM (OJVM) Component Database PSU 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433607.1'>Note 2433607.1</a></td>
+<td>List not published for security-related fixes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28265827' target='_blank' >Patch 28265827</a></td>
+<td>Microsoft Windows (32-Bit) and x64 (64-Bit) BP 11.2.0.4.181016</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2003218.1'>Note 2003218.1</a></td>
+<td>README file section "Bugs Fixed by This Patch"</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689181' target='_blank' >Patch 28689181</a></td>
+<td>Quarterly Full Stack download for Exadata (Oct2018) BP 11.2.0.4</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=2433633.1'>Note 2433633.1</a></td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1601749.1'>Note 1601749.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28689189' target='_blank' >Patch 28689189</a></td>
+<td>Quarterly Full Stack download for Supercluster (Oct2018) BP 11.2.0.4</td>
+<td>Will be updated when available</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1601749.1'>Note 1601749.1</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>October 16, 2018</td>
+<td>11.2.0.4.181016</td>
+<td><a href='/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&sourceId=756671.1&patchId=28462975' target='_blank' >Patch 28462975</a></td>
+<td>Quarterly Database Patch for Exadata BP 11.2.0.4.181016</td>
+<td>See section 3 of the patch README file</td>
+<td><a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1601749.1'>Note 1601749.1</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- Beginning of Section 5, Sources of Additional Information -->
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<a name="aref_section114"></a><h2 class="km">5.0 Sources of Additional Information</h2>
+<p>The following documents provide additional information about Critical Patch Updates:</p>
+<ul>
+<li style="background-color: white;">
+<p>My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=1227443.1'>Note 1227443.1</a>,<span id="kmPgTpl:r1:0:ol"> <em>Database PSU/BP/Update/Revision - Known Issues Master Note</em></span></p>
+</li>
+<li style="background-color: white;">
+<p>My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=854428.1'>Note 854428.1</a>,<span id="kmPgTpl:r1:0:ol"> <em>Patch Set Updates (PSUs) for Oracle Products</em></span></p>
+</li>
+<li style="background-color: white;">
+<p>My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=438314.1'>Note 438314.1</a>,<span id="kmPgTpl:r1:0:ol"> <em>Critical Patch Update - Introduction to Database n-Apply CPU Patches</em></span></p>
+</li>
+<li style="background-color: white;">
+<p>My Oracle Support <a href='/epmos/faces/DocumentDisplay?parent=DOCUMENT&sourceId=756671.1&id=161549.1'>Note 161549.1</a>,<span id="kmPgTpl:r1:0:ol"> <em>Oracle Database, CRS, ASM, Networking and EM Agent Patches for Microsoft Platforms</em></span></p>
+</li>
+</ul>
+</div>
+<!-- Beginning of Section 6, Modification History -->
+<a name="aref_section115"></a><h2 class="km">6.0 Modification History</h2>
+<p class="titleintable"><em>Modification History</em></p>
+<table title="modification history" summary="modification history" border="1" frame="border" rules="all" cellspacing="0" cellpadding="3"><colgroup> <col width="1*" /> <col width="50%" /> </colgroup>
+<thead>
+<tr align="left" valign="top"><th id="r1c1-t178" style="vertical-align: bottom; text-align: left; width: 255px;" width="255">Date</th><th id="r1c2-t178" style="text-align: left; width: 849px;" valign="bottom" width="847">Modification</th></tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td id="r7c1-t178" headers="r1c1-t178">
+<p>16 October 2018</p>
+</td>
+<td headers="r7c1-t178 r1c2-t178">Released</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t" headers="r1c1-t178">17 October 2018</td>
+<td headers="r7c1-t178 r1c2-t178">Corrected the patch Number for Database PSU 11.2.0.4.181016<br /> added Patch 28659165 to table 3<br /> added Patch 28655784 to table 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t2" headers="r1c1-t178">18 October 2018</td>
+<td>Updated all 11.2.0.4 rows in section 3<br /> Updated ETAs for all 'QFSDP for Exadata' rows in section 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t3" headers="r1c1-t178">19 October 2018</td>
+<td>Updated ETAs for section 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t4" headers="r1c1-t178">22 October 2018</td>
+<td>Updated availability in section 3<br /> Added ETA for GI PSU 11.2.0.4.181016 on AIX to section 3<br /> Added ETA for Combo OJVM Update 18.4.0 and GI Update 18.4.0 to section 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t5" headers="r1c1-t178">23 October 2018</td>
+<td>Updated availability in section 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t6" headers="r1c1-t178">24 October 2018</td>
+<td>Updated availability in section 3</td>
+</tr>
+<tr align="left" valign="top">
+<td id="r7c1-t7" headers="r1c1-t178">26 October 2018</td>
+<td>Updated availability for QFSDP patches in section 3</td>
+</tr>
+</tbody>
+</table>
+<!-- End of Section 6, Modification History -->
+<p>&nbsp;</p>
+</span></div></div></td><td id="kmPgTpl:r1:0:cf56" width="1%"><img id="kmPgTpl:r1:0:s44" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"></td><td id="kmPgTpl:r1:0:cf55" style="vertical-align:top" width="20%"><div id="kmPgTpl:r1:0:pglwdg" class="x1a" style="width:100%;height:100%;overflow:auto;"><div><div id="kmPgTpl:r1:0:ws1" style="margin-top:10px"></div></div><div><div id="kmPgTpl:r1:0:pb5" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:pb5::_afrDscl" title="Collapse Was this document helpful?"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Was this document helpful?</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:pb5::content"><div id="kmPgTpl:r1:0:psl3" class="xpf" style="width:auto;overflow:visible;height:auto"><div style="overflow:hidden"><div id="kmPgTpl:r1:0:psl3::c" style="overflow:hidden"><div id="kmPgTpl:r1:0:r7" class="xpg"><div id="kmPgTpl:r1:0:r7:0:pfl1" class="x19"><table cellpadding="0" cellspacing="0" border="0" summary="" style="width: auto"><tbody><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td class="x51"><div id="kmPgTpl:r1:0:r7:0:pfl2" class="x19" style="margin-left:0;padding-left:0;"><table cellpadding="0" cellspacing="0" border="0" summary="" style="width: auto"><tbody><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td><tr><td class="x51"><div id="kmPgTpl:r1:0:r7:0:sor1" class="x21"><div id="kmPgTpl:r1:0:r7:0:sor1::content" name="kmPgTpl:r1:0:r7:0:sor1" class="x2j"><fieldset style="border:none; margin:0px; padding:0px;"><legend class="x9w"> </legend><div><span class="xif"><input type="radio" name="kmPgTpl:r1:0:r7:0:sor1" id="kmPgTpl:r1:0:r7:0:sor1:_0" value="3" class="xqe"></span><label for="kmPgTpl:r1:0:r7:0:sor1:_0" class="x2l">Yes</label></div><div><span class="xif"><input type="radio" name="kmPgTpl:r1:0:r7:0:sor1" id="kmPgTpl:r1:0:r7:0:sor1:_1" value="1" class="xqe"></span><label for="kmPgTpl:r1:0:r7:0:sor1:_1" class="x2l">No</label></div></fieldset></div></div></td></tr></td></tr></tbody></table></td></tr></tbody></table></div></td></tr><tr><td class="x51"><div id="kmPgTpl:r1:0:r7:0:pfl3" class="x19" style="margin-left:0;padding-left:0;"><table cellpadding="0" cellspacing="0" border="0" summary="" style="width: auto"><tbody><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td class="x51"><table id="kmPgTpl:r1:0:r7:0:tl2" style="margin-left:0;padding-left:0;" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""></table></td></tr></tbody></table></td></tr><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td class="x51"><table id="kmPgTpl:r1:0:r7:0:tl1" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr id="kmPgTpl:r1:0:r7:0:rl1"><td id="kmPgTpl:r1:0:r7:0:cf1" align="right"></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></div><div style="display:none"><a id="kmPgTpl:r1:0:r7:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div></div></div></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></div><div><div id="kmPgTpl:r1:0:s49" style="margin-top:10px"></div></div><div><div id="kmPgTpl:r1:0:pb1" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:pb1::_afrDscl" title="Collapse Document Details"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Document Details</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:pb1::content"><span id="kmPgTpl:r1:0:pglicons" class="x1a"><img id="kmPgTpl:r1:0:ws2" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"><div id="kmPgTpl:r1:0:comeditpopw" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:r1:0:comeditpopw::content"></div></div><a id="kmPgTpl:r1:0:wgil2" title="Email link to this document" class="x132" href="#"><img id="kmPgTpl:r1:0:wgil2::icon" src="/epmos/common/images/email_16.png" title="Email link to this document" alt="Email link to this document" class="x13a"></a><img id="kmPgTpl:r1:0:ws5" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"><a id="kmPgTpl:r1:0:wgil3" title="Open document in new window" class="x132" href="/epmos/faces/DocContentDisplay?id=756671.1" target="_blank"><img id="kmPgTpl:r1:0:wgil3::icon" src="/epmos/common/images/offsite_ena.png" title="Open document in new window" alt="Open document in new window" class="x13a"></a><img id="kmPgTpl:r1:0:ws6" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"><a id="kmPgTpl:r1:0:wcl5" title="Printable Page" class="xfe" onclick="return false;" href="#"><img id="kmPgTpl:r1:0:wi1" title="Printable Page" alt="Printable Page" class="xjd" style="margin-bottom:-5px;" src="/epmos/ui/images/print_ena.png"></a><img id="kmPgTpl:r1:0:ws7" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></span><img id="kmPgTpl:r1:0:ws14" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:wpgl2" class="x1a"><tbody><tr><td><img id="kmPgTpl:r1:0:ws15" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></td><td><div id="kmPgTpl:r1:0:wpfl2" class="x19"><table cellpadding="0" cellspacing="0" border="0" summary="" style="width: auto"><tbody><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td></td><td></td></tr><tr><td></td><td class="x51"><span id="kmPgTpl:r1:0:wol7" class="xq"><label>Type:</label></span></td></tr><tr><td></td><td class="x51"><span id="kmPgTpl:r1:0:wol6" class="xq"><label>Status:</label></span></td></tr><tr><td></td><td class="x51"><span id="kmPgTpl:r1:0:wol5" class="xq"><label>Last Major Update:</label></span></td></tr><tr><td></td><td class="x51"><span id="kmPgTpl:r1:0:wol4" class="xq"><label>Last Update:</label></span></td></tr><tr><td></td><td class="x51"><span id="kmPgTpl:r1:0:wol3" class="xq"><label for="kmPgTpl:r1:soc3::content">Language:</label></span></td></tr></tbody></table></td></tr></tbody></table></div></td><td><div id="kmPgTpl:r1:0:wpfl1" class="x19"><table cellpadding="0" cellspacing="0" border="0" summary="" style="width: auto"><tbody><tr><td class="x4w" colspan="1"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tbody><tr><td></td><td></td></tr><tr><td></td><td class="x51"><span style="color:Black;;white-space:nowrap">ANNOUNCEMENT</span></td></tr><tr><td></td><td class="x51"><span style="color:Black;;white-space:nowrap">PUBLISHED</span></td></tr><tr><td></td><td class="x51"><span style="color:Black;;white-space:nowrap">26-Oct-2018</span></td></tr><tr><td></td><td class="x51"><span style="color:Black;;white-space:nowrap">26-Oct-2018</span></td></tr><tr class="x1z" id="kmPgTpl:r1:0:soc3"><td class="x12 x4z"></td><td valign="top" nowrap class="xrs"><select id="kmPgTpl:r1:0:soc3::content" name="kmPgTpl:r1:0:soc3" class="x2h" title="English"><option value="0" selected>English</option><option value="1">&#26085;&#26412;&#35486;</option></select></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table><img id="kmPgTpl:r1:0:sw47" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:wpgl1" class="xpj x1a" style="display:none;background-color:#E4E4E4;"><tbody><tr><td><img id="kmPgTpl:r1:0:ws13" src="/epmos/adf/images/t.gif" alt="" width="15" height="30"></td><td><div id="kmPgTpl:r1:0:pgl22" class="x1a"><div><span id="kmPgTpl:r1:0:wol2" class="xq" style="color:#003C5B;font-weight:bold;"><label>Currency Check Required.</label></span></div><div><img id="kmPgTpl:r1:0:s47" src="/epmos/adf/images/t.gif" alt="" width="15" height="5"></div><div><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:pgl24" class="xpj x1a"><tbody><tr><td><button id="kmPgTpl:r1:0:wcil3" class="x7j p_AFTextOnly" onclick="return false;">Current</button></td><td><button id="kmPgTpl:r1:0:wcil2" class="x7j p_AFTextOnly" onclick="return false;">Out of Date</button></td><td><div id="kmPgTpl:r1:0:comeditpopwidget" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="kmPgTpl:r1:0:comeditpopwidget::content"></div></div></td></tr></tbody></table></div><div><img id="kmPgTpl:r1:0:s48" src="/epmos/adf/images/t.gif" alt="" width="15" height="5"></div></div></td><td><img id="kmPgTpl:r1:0:ws12" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td></tr></tbody></table></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></div><div><img id="kmPgTpl:r1:0:ws11" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></div><div><div id="kmPgTpl:r1:0:pb3" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:pb3::_afrDscl" title="Collapse Related Products"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Related Products</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:pb3::content"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:pgl21" class="x1a"><tbody><tr><td><img id="kmPgTpl:r1:0:s43" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></td><td><div id="kmPgTpl:r1:0:pgl20" class="x1a"><div>Oracle Database Cloud Service</div><div><a id="kmPgTpl:r1:0:i33:0:cl7" class="xfe" onclick="return false;" href="#"></a></div><div>Oracle Database Exadata Cloud Machine</div><div><a id="kmPgTpl:r1:0:i33:1:cl7" class="xfe" onclick="return false;" href="#"></a></div><div>Oracle Database Cloud Schema Service</div><div><a id="kmPgTpl:r1:0:i33:2:cl7" class="xfe" onclick="return false;" href="#"></a></div><div>Oracle Cloud Infrastructure - Database Service</div><div><a id="kmPgTpl:r1:0:i33:3:cl7" class="xfe" onclick="return false;" href="#"></a></div><div>Oracle Database Backup Service</div><div><a id="kmPgTpl:r1:0:i33:4:cl7" class="xfe" onclick="return false;" href="#"></a></div></div></td></tr></tbody></table><a id="kmPgTpl:r1:0:wcl1" class="xfe" onclick="return false;" href="#">Show More</a></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></div><div><div id="kmPgTpl:r1:0:r4" class="xpg"><span id="kmPgTpl:r1:0:r4:0:pgl3" class="x1a"><span id="kmPgTpl:r1:0:r4:0:p1"></span><div id="kmPgTpl:r1:0:r4:0:pb1" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:r4:0:pb1::_afrDscl" title="Collapse Information Centers"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Information Centers</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:r4:0:pb1::content"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:r4:0:pgl1" class="x1a"><tbody><tr><td><img id="kmPgTpl:r1:0:r4:0:s1" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></td><td><img id="kmPgTpl:r1:0:r4:0:wait" title="Loading Information Center" alt="Loading Information Center" class="xjd" src="/epmos/common/images/spinning-wheel.gif"></td><td><span style="display:none">No Information Center available for this document.</span></td><td><div id="kmPgTpl:r1:0:r4:0:pgl2" class="x1a" style="display:none"></div></td></tr></tbody></table></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></span><div style="display:none"><a id="kmPgTpl:r1:0:r4:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div><div><div id="kmPgTpl:r1:0:r6" class="xpg"><span id="kmPgTpl:r1:0:r6:0:pgl3" class="x1a"><span id="kmPgTpl:r1:0:r6:0:p1"></span><div id="kmPgTpl:r1:0:r6:0:pb1" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:r6:0:pb1::_afrDscl" title="Collapse Document References"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Document References</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:r6:0:pb1::content"><table cellpadding="0" cellspacing="0" border="0" summary="" id="kmPgTpl:r1:0:r6:0:pgl1" class="x1a"><tbody><tr><td><img id="kmPgTpl:r1:0:r6:0:s1" src="/epmos/adf/images/t.gif" alt="" width="20" height="10"></td><td><img id="kmPgTpl:r1:0:r6:0:wait" title="Loading Information Center" alt="Loading Information Center" class="xjd" src="/epmos/common/images/spinning-wheel.gif"></td><td><span style="display:none">No References available for this document. </span></td><td><div id="kmPgTpl:r1:0:r6:0:pgl2" class="x1a" style="display:none"></div></td></tr></tbody></table></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></span><div style="display:none"><a id="kmPgTpl:r1:0:r6:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div><div><div id="kmPgTpl:r1:0:pb4" class="xdk"><table class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrf p_AFCore p_AFDefault">&nbsp;</td><td class="xrj p_AFCore p_AFDefault"><table cellpadding="0" cellspacing="0" summary=""><tbody><tr><td class="xr5"><a href="#" onclick="return false" class="xts x1ay" id="kmPgTpl:r1:0:pb4::_afrDscl" title="Collapse Recently Viewed"></a></td><td style="white-space:nowrap" class="xr7"><h1 class="xr9">Recently Viewed</h1></td></tr></tbody></table></td><td class="xrn p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table><div class="x1b5 p_AFCore p_AFDefault"><div class="x5s p_AFCore p_AFDefault" id="kmPgTpl:r1:0:pb4::content"><div id="kmPgTpl:r1:0:psl2" class="xpf" style="width:auto;overflow:visible;height:auto"><div style="overflow:hidden"><div id="kmPgTpl:r1:0:psl2::c" style="overflow:hidden"><div id="kmPgTpl:r1:0:r5" class="xpg"><span id="kmPgTpl:r1:0:r5:0:pgl1" class="x1a"><div id="kmPgTpl:r1:0:r5:0:recentViewsPanelGroupLayout" class="x1a" style=""><div><table id="kmPgTpl:r1:0:r5:0:tl1" align="left" cellpadding="0" cellspacing="0" border="0" summary=""><tr id="kmPgTpl:r1:0:r5:0:rl2" valign="top"><td id="kmPgTpl:r1:0:r5:0:cf6"><img id="kmPgTpl:r1:0:r5:0:s3" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td><td id="kmPgTpl:r1:0:r5:0:cf3"><a id="kmPgTpl:r1:0:r5:0:gl1" class="xfu" href="/epmos/faces/DocumentDisplay?id=756671.1&amp;parent=WIDGET_RECENTLY_VIEWED&amp;sourceId=756671.1" target="_self">Master Note for Database Proactive Patch Program [756671.1]</a></td><td id="kmPgTpl:r1:0:r5:0:cf9"><img id="kmPgTpl:r1:0:r5:0:s11" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl3"><td id="kmPgTpl:r1:0:r5:0:cf4" colspan="6"><img id="kmPgTpl:r1:0:r5:0:s1" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl2j_id_1" valign="top"><td id="kmPgTpl:r1:0:r5:0:cf6j_id_1"><img id="kmPgTpl:r1:0:r5:0:s3j_id_1" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td><td id="kmPgTpl:r1:0:r5:0:cf3j_id_1"><a id="kmPgTpl:r1:0:r5:0:gl1j_id_1" class="xfu" href="/epmos/faces/DocumentDisplay?id=274526.1&amp;parent=WIDGET_RECENTLY_VIEWED&amp;sourceId=756671.1" target="_self">How To Download And Install The Latest OPatch(6880880) Version [274526.1]</a></td><td id="kmPgTpl:r1:0:r5:0:cf9j_id_1"><img id="kmPgTpl:r1:0:r5:0:s11j_id_1" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl3j_id_1"><td id="kmPgTpl:r1:0:r5:0:cf4j_id_1" colspan="6"><img id="kmPgTpl:r1:0:r5:0:s1j_id_1" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl2j_id_2" valign="top"><td id="kmPgTpl:r1:0:r5:0:cf6j_id_2"><img id="kmPgTpl:r1:0:r5:0:s3j_id_2" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td><td id="kmPgTpl:r1:0:r5:0:cf3j_id_2"><a id="kmPgTpl:r1:0:r5:0:gl1j_id_2" class="xfu" href="/epmos/faces/DocumentDisplay?id=293369.1&amp;parent=WIDGET_RECENTLY_VIEWED&amp;sourceId=756671.1" target="_self">Master Note For OPatch [293369.1]</a></td><td id="kmPgTpl:r1:0:r5:0:cf9j_id_2"><img id="kmPgTpl:r1:0:r5:0:s11j_id_2" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl3j_id_2"><td id="kmPgTpl:r1:0:r5:0:cf4j_id_2" colspan="6"><img id="kmPgTpl:r1:0:r5:0:s1j_id_2" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl2j_id_3" valign="top"><td id="kmPgTpl:r1:0:r5:0:cf6j_id_3"><img id="kmPgTpl:r1:0:r5:0:s3j_id_3" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td><td id="kmPgTpl:r1:0:r5:0:cf3j_id_3"><a id="kmPgTpl:r1:0:r5:0:gl1j_id_3" class="xfu" href="/epmos/faces/DocumentDisplay?id=1313767.1&amp;parent=WIDGET_RECENTLY_VIEWED&amp;sourceId=756671.1" target="_self">Package body is INVALID after impdp [1313767.1]</a></td><td id="kmPgTpl:r1:0:r5:0:cf9j_id_3"><img id="kmPgTpl:r1:0:r5:0:s11j_id_3" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl3j_id_3"><td id="kmPgTpl:r1:0:r5:0:cf4j_id_3" colspan="6"><img id="kmPgTpl:r1:0:r5:0:s1j_id_3" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl2j_id_4" valign="top"><td id="kmPgTpl:r1:0:r5:0:cf6j_id_4"><img id="kmPgTpl:r1:0:r5:0:s3j_id_4" src="/epmos/adf/images/t.gif" alt="" width="20" height="0px"></td><td id="kmPgTpl:r1:0:r5:0:cf3j_id_4"><a id="kmPgTpl:r1:0:r5:0:gl1j_id_4" class="xfu" href="/epmos/faces/DocumentDisplay?id=1982901.1&amp;parent=WIDGET_RECENTLY_VIEWED&amp;sourceId=756671.1" target="_self">Resize Operation Completed For File# [1982901.1]</a></td><td id="kmPgTpl:r1:0:r5:0:cf9j_id_4"><img id="kmPgTpl:r1:0:r5:0:s11j_id_4" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td></tr><tr id="kmPgTpl:r1:0:r5:0:rl3j_id_4"><td id="kmPgTpl:r1:0:r5:0:cf4j_id_4" colspan="6"><img id="kmPgTpl:r1:0:r5:0:s1j_id_4" src="/epmos/adf/images/t.gif" alt="" width="10" height="5"></td></tr></table></div><div><div id="kmPgTpl:r1:0:r5:0:pgl2" class="x1a"><div><div id="kmPgTpl:r1:0:r5:0:s4" style="margin-top:5px"></div></div><div><a id="kmPgTpl:r1:0:r5:0:wcl2" class="xfe" onclick="return false;" href="#">Show More</a></div></div></div></div></span><div style="display:none"><a id="kmPgTpl:r1:0:r5:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div></div></div></div></div><table style="font-size:1px;line-height:1px" class="xqt p_AFCore p_AFDefault" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tbody><tr><td class="xrh p_AFCore p_AFDefault">&nbsp;</td><td class="xrl p_AFCore p_AFDefault">&nbsp;</td><td class="xrp p_AFCore p_AFDefault">&nbsp;</td></tr></tbody></table></div></div></div></td></tr></table></div><div><img id="kmPgTpl:r1:0:s51" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"><span id="kmPgTpl:r1:0:pgl29" class="x1a"><img id="kmPgTpl:r1:0:s52" src="/epmos/adf/images/t.gif" alt="" width="10" height="10">Didn't find what you are looking for?<img id="kmPgTpl:r1:0:s53" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"><button id="kmPgTpl:r1:0:cb1" class="x7j" style="vertical-align:middle; height:19px;" onclick="return false;"><img src="/epmos/common/images/comm_thread_15x15.png" alt="" class="xf7"><span title="" class="xfa">Ask in Community...</span></button></span></div><div><span id="kmPgTpl:r1:0:pgl5" class="x1a"><img id="kmPgTpl:r1:0:s7" src="/epmos/adf/images/t.gif" alt="" width="10" height="10"><div id="kmPgTpl:r1:0:sdh1" title="Related Products" class="x6w"><table class="p_AFDisclosed xty" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xuj">&nbsp;</td><td class="xvf"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="xtm"><a href="#" onclick="return false" class="xtu x1aw" id="kmPgTpl:r1:0:sdh1::_afrDscl" title="Collapse Related"></a></td><td class="x22p"></td><td id="kmPgTpl:r1:0:sdh1::_afrTtxt"><div title="Related" class="xu3"><h1 class="xdm ">Related</h1></div></td><td id="kmPgTpl:r1:0:sdh1::_afrEps"><div class="xdm  xw9" style="display: none" title="Related">&#8230;</div></td><td id="kmPgTpl:r1:0:sdh1::_afrStr" style="width: 100%"></td></tr></table></td><td class="xv1">&nbsp;</td></tr></table><div class="xwg"><div><div id="kmPgTpl:r1:0:ph2" title="Related Products" class="x6v"><table class="xtx" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xut">&nbsp;</td><td class="xvh"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x22o"></td><td id="kmPgTpl:r1:0:ph2::_afrTtxt"><div title="Products" class="xu2"><h2 class="xdo ">Products</h2></div></td><td id="kmPgTpl:r1:0:ph2::_afrEps"><div class="xdo  xw8" style="display: none" title="Products">&#8230;</div></td><td id="kmPgTpl:r1:0:ph2::_afrStr" style="width: 100%"></td></tr></table></td><td class="xvb">&nbsp;</td></tr></table><div class="xwl"><div><div id="kmPgTpl:r1:0:pl1" class="x3q"><ul><li value="1"><span id="kmPgTpl:r1:0:i1:0:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:0:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:0:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:0:gl16" title="Oracle Database Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_3EEADZZ&amp;name=Oracle%20Database%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Cloud Service</a> &gt; <a id="kmPgTpl:r1:0:i1:0:gl17" title="Oracle Database Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_3LN5LWB&amp;name=Oracle%20Database%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Cloud Service</a></span></li><li value="2"><span id="kmPgTpl:r1:0:i1:1:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:1:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:1:gl15" title="Oracle Infrastructure Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JF&amp;name=Oracle%20Infrastructure%20Cloud&amp;source=" target="_parent">Oracle Infrastructure Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:1:gl16" title="Oracle Public Cloud Machine" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_5QNJ0PQ&amp;name=Oracle%20Public%20Cloud%20Machine&amp;source=" target="_parent">Oracle Public Cloud Machine</a> &gt; <a id="kmPgTpl:r1:0:i1:1:gl17" title="Oracle Database Exadata Cloud Machine" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_68T4MV2&amp;name=Oracle%20Database%20Exadata%20Cloud%20Machine&amp;source=" target="_parent">Oracle Database Exadata Cloud Machine</a></span></li><li value="3"><span id="kmPgTpl:r1:0:i1:2:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:2:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:2:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:2:gl16" title="Oracle Database Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_3EEADZZ&amp;name=Oracle%20Database%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Cloud Service</a> &gt; <a id="kmPgTpl:r1:0:i1:2:gl17" title="Oracle Database Cloud Schema Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_2A6PX10&amp;name=Oracle%20Database%20Cloud%20Schema%20Service&amp;source=" target="_parent">Oracle Database Cloud Schema Service</a></span></li><li value="4"><span id="kmPgTpl:r1:0:i1:3:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:3:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:3:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:3:gl16" title="Oracle Cloud Infrastructure - Database Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_7X4HD59&amp;name=Oracle%20Cloud%20Infrastructure%20-%20Database%20Service&amp;source=" target="_parent">Oracle Cloud Infrastructure - Database Service</a> &gt; <a id="kmPgTpl:r1:0:i1:3:gl17" title="Oracle Cloud Infrastructure - Database Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_7YPWYI3&amp;name=Oracle%20Cloud%20Infrastructure%20-%20Database%20Service&amp;source=" target="_parent">Oracle Cloud Infrastructure - Database Service</a></span></li><li value="5"><span id="kmPgTpl:r1:0:i1:4:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:4:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:4:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:4:gl16" title="Oracle Database Backup Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_41PG6O1&amp;name=Oracle%20Database%20Backup%20Service&amp;source=" target="_parent">Oracle Database Backup Service</a> &gt; <a id="kmPgTpl:r1:0:i1:4:gl17" title="Oracle Database Backup Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_3Y98SEY&amp;name=Oracle%20Database%20Backup%20Service&amp;source=" target="_parent">Oracle Database Backup Service</a></span></li><li value="6"><span id="kmPgTpl:r1:0:i1:5:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:5:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:5:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:5:gl16" title="Oracle Database Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_3EEADZZ&amp;name=Oracle%20Database%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Cloud Service</a> &gt; <a id="kmPgTpl:r1:0:i1:5:gl17" title="Oracle Database Cloud Exadata Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_52DRHX6&amp;name=Oracle%20Database%20Cloud%20Exadata%20Service&amp;source=" target="_parent">Oracle Database Cloud Exadata Service</a></span></li><li value="7"><span id="kmPgTpl:r1:0:i1:6:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:6:gl14" title="Oracle Database Products" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_F8H7P8&amp;name=Oracle%20Database%20Products&amp;source=" target="_parent">Oracle Database Products</a> &gt; <a id="kmPgTpl:r1:0:i1:6:gl15" title="Oracle Database Suite" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_F8H7PG&amp;name=Oracle%20Database%20Suite&amp;source=" target="_parent">Oracle Database Suite</a> &gt; <a id="kmPgTpl:r1:0:i1:6:gl16" title="Oracle Database" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_F8H7QC&amp;name=Oracle%20Database&amp;source=" target="_parent">Oracle Database</a> &gt; <a id="kmPgTpl:r1:0:i1:6:gl17" title="Oracle Database - Enterprise Edition" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_1_97NVP&amp;name=Oracle%20Database%20-%20Enterprise%20Edition&amp;source=" target="_parent">Oracle Database - Enterprise Edition</a></span></li><li value="8"><span id="kmPgTpl:r1:0:i1:7:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:7:gl14" title="Oracle Database Products" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_F8H7P8&amp;name=Oracle%20Database%20Products&amp;source=" target="_parent">Oracle Database Products</a> &gt; <a id="kmPgTpl:r1:0:i1:7:gl15" title="Oracle Database Suite" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_F8H7PG&amp;name=Oracle%20Database%20Suite&amp;source=" target="_parent">Oracle Database Suite</a> &gt; <a id="kmPgTpl:r1:0:i1:7:gl16" title="Oracle Database" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_F8H7QC&amp;name=Oracle%20Database&amp;source=" target="_parent">Oracle Database</a> &gt; <a id="kmPgTpl:r1:0:i1:7:gl17" title="Oracle Database - Standard Edition" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_1_97KLC&amp;name=Oracle%20Database%20-%20Standard%20Edition&amp;source=" target="_parent">Oracle Database - Standard Edition</a></span></li><li value="9"><span id="kmPgTpl:r1:0:i1:8:pgl3" class="x1a"><a id="kmPgTpl:r1:0:i1:8:gl14" title="Oracle Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=line&amp;id=LI_3_3M9D0J9&amp;name=Oracle%20Cloud&amp;source=" target="_parent">Oracle Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:8:gl15" title="Oracle Platform Cloud" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=family&amp;id=FI_3_3M9D0JB&amp;name=Oracle%20Platform%20Cloud&amp;source=" target="_parent">Oracle Platform Cloud</a> &gt; <a id="kmPgTpl:r1:0:i1:8:gl16" title="Oracle Database Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=area&amp;id=AI_3_3EEADZZ&amp;name=Oracle%20Database%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Cloud Service</a> &gt; <a id="kmPgTpl:r1:0:i1:8:gl17" title="Oracle Database Exadata Express Cloud Service" href="/epmos/main/kmservlet?operation=doSearch&amp;task=SearchProduct&amp;type=product&amp;id=PI_3_64KNB9X&amp;name=Oracle%20Database%20Exadata%20Express%20Cloud%20Service&amp;source=" target="_parent">Oracle Database Exadata Express Cloud Service</a></span></li></ul></div></div></div></div><div id="kmPgTpl:r1:0:ph1" title="Related Translations" class="x6v"><table class="xtx" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xut">&nbsp;</td><td class="xvh"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x22o"></td><td id="kmPgTpl:r1:0:ph1::_afrTtxt"><div title="Translations" class="xu2"><h2 class="xdo ">Translations</h2></div></td><td id="kmPgTpl:r1:0:ph1::_afrEps"><div class="xdo  xw8" style="display: none" title="Translations">&#8230;</div></td><td id="kmPgTpl:r1:0:ph1::_afrStr" style="width: 100%"></td></tr></table></td><td class="xvb">&nbsp;</td></tr></table><div class="xwl"><div><div id="kmPgTpl:r1:0:pl2" class="x3q"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td width="50%" valign="top"><ul><li value="1"><span id="kmPgTpl:r1:0:i29:0:pgl1" class="x1a">English<img id="kmPgTpl:r1:0:i29:0:s35" src="/epmos/adf/images/t.gif" alt="" width="5" height="10">Source</span></li></ul></td><td width="50%" valign="top"><ul><li value="2"><span id="kmPgTpl:r1:0:i29:1:pgl15" class="x1a">Japanese<img id="kmPgTpl:r1:0:i29:1:s37" src="/epmos/adf/images/t.gif" alt="" width="5" height="10"><a id="kmPgTpl:r1:0:i29:1:cl5" title="&#26085;&#26412;&#35486;" onclick="return false;" href="#">&#26085;&#26412;&#35486;</a></span></li></ul></td></tr></table></div></div></div></div></div></div></div></span></div><div><img id="kmPgTpl:r1:0:s5" src="/epmos/adf/images/t.gif" alt="" width="10" height="20"></div><div><a id="kmPgTpl:r1:0:toTop" title="Back to Top" class="xfd" style="text-decoration:none" onclick="return false;" href="#"><img id="kmPgTpl:r1:0:toTop::icon" src="/epmos/ui/images/quicklink_smlarrowup_enabled.gif" title="Back to Top" alt="Back to Top" class="x137"><span class="x133">Back to Top</span></a></div></div></div></div></div></div></div><div style="display:none"><a id="kmPgTpl:r1:0:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div></div></td></tr></tbody></table></div></div></div><div><div id="kmPgTpl:pt_psl2" class="xpj x23q xpf" style="height:25px;">&nbsp;<div id="kmPgTpl:pt_psl2::b" style="position:absolute;overflow:hidden;left:0px;bottom:0px;height:25px;right:0px"><table cellpadding="0" cellspacing="0" border="0" summary="" align="center" id="kmPgTpl:pt_pgl3" class="x1a" style="position:absolute;width:auto;height:auto;top:0px;left:0px;bottom:0px;right:0px"><tbody><tr><td><table cellpadding="0" cellspacing="0" border="0" summary="" align="center" id="kmPgTpl:svFt2:pgFooter" class="xq1 x1a"><tbody><tr><td valign="top"><div id="kmPgTpl:svFt2:npFtr" class="xk3" style="overflow:hidden;"><div class="xre"><div id="kmPgTpl:svFt2:npFtr::oc" class="xjk"><table cellpadding="0" cellspacing="0" border="0" summary=""><tbody><tr><td class="x117"><span class="xq1">Copyright (c) 2018, Oracle. All rights reserved.</span></td><td class="x117"><img id="kmPgTpl:svFt2:s1" src="/epmos/adf/images/t.gif" alt="" width="10" height="0px"></td><td class="xh3">&nbsp;</td><td class="x117"><a id="kmPgTpl:svFt2:tou" class="xq1 xfu" href="https://www.oracle.com/support/mosterms.html" target="_blank">Legal Notices and Terms of Use</a></td><td class="xh3">&nbsp;</td><td class="x117"><a id="kmPgTpl:svFt2:privacy" class="xq1 xfu" href="http://www.oracle.com/us/legal/privacy/index.html" target="_blank">Privacy Statement</a></td></tr></tbody></table></div><div id="kmPgTpl:svFt2:npFtr::eoi" class="xjv"><div id="kmPgTpl:svFt2:npFtr::eoc" class="xk8"></div></div></div><div class="xlv"></div></div></td></tr></tbody></table></td></tr></tbody></table></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="xs2"></div></div></td><td id="kmPgTpl:pt_db8::r" style="display:table-cell;width:6px" class="xs3 p_AFFlow"><span style="display:block;"></span></td></tr></tbody></table><div style="height:8px"><div id="kmPgTpl:pt_db8::bl" style="position:absolute;overflow:hidden;bottom:0px;height:8px;left:0px;width:6px" class="xs4 p_AFFlow"><span style="display:block;"></span></div><div id="kmPgTpl:pt_db8::b" style="position:absolute;overflow:hidden;left:6px;bottom:0px;right:6px;height:8px"><div style="position:absolute;left:0px;right:0px;top:0px;bottom:0px" class="xs5 p_AFFlow"><span style="display:block;"></span></div></div><div id="kmPgTpl:pt_db8::br" style="position:absolute;overflow:hidden;bottom:0px;height:8px;right:0px;width:6px" class="xs6 p_AFFlow"><span style="display:block;"></span></div></div></div></div></div></div></div></div><input type="hidden" name="org.apache.myfaces.trinidad.faces.FORM" value="f1"><span id="f1::postscript"><input type="hidden" name="javax.faces.ViewState" value="!-4mhxndrz9"></span></form><div id="d1::msgCtr" style="display:none"><div id="d1::msgDlg" class="x17j"><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x17q"><tr><td class="p_AFResizable x17s" id="d1::msgDlg::_hse">&nbsp;</td><td class="p_AFResizable x17u" id="d1::msgDlg::_hce"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td><div id="d1::msgDlg::_ticn" class="x18l" style="display:none"></div></td><td class="x17y" id="d1::msgDlg::tb"><div id="d1::msgDlg::_ttxt" class="x18j"></div></td><td><div class="x18n"><a href="#" onclick="return false" class="x18e" id="d1::msgDlg::close" title="Close"></a></div></td></tr></table></td><td class="p_AFResizable x17w" id="d1::msgDlg::_hee">&nbsp;</td></tr><tr><td class="p_AFResizable x183" id="d1::msgDlg::_cse">&nbsp;</td><td class="p_AFResizable x1o" id="d1::msgDlg::contentContainer"><div id="d1::msgDlg::_ccntr" class="x181" style="position:relative;overflow:auto;"><div id="d1::msgDlg::_cnt" class="x14u"></div></div></td><td class="p_AFResizable x185" id="d1::msgDlg::_cee">&nbsp;</td></tr><tr><td class="p_AFResizable x187" id="d1::msgDlg::_fse"><div></div></td><td class="p_AFResizable x189" id="d1::msgDlg::_fce"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="p_AFResizable x18c" id="d1::msgDlg::_fcc"><button type="button" id="d1::msgDlg::cancel" class="xf6 p_AFTextOnly" onclick="return false;">OK</button></td><td align="left" valign="bottom"><div class="p_AFResizable x18i"><a tabIndex="-1" class="x18g" id="d1::msgDlg::_ree" title="Resize"></a></div></td></tr></table></td><td class="p_AFResizable x18b" id="d1::msgDlg::_fee"><div></div></td></tr></table></div></div><span id="d1::iconC" style="display:none"><span id="af_messages::info-icon"><img src="/epmos/afr/info.png" width="16" height="16" border="0" title="Information" alt="Information"></span><span id="af_panelSplitter::vertical-restore-icon"><img src="/epmos/afr/fusion/splittervr.png" width="23" height="7" border="0" style="vertical-align:top;cursor:default" title="Restore Pane" alt="Restore Pane"></span><span id="af_message::warning-icon"><img src="/epmos/afr/warning.png" width="16" height="16" border="0" title="Warning" alt="Warning"></span><span id="af_messages::fatal-icon"><img src="/epmos/afr/error.png" width="16" height="16" border="0" title="Critical Error" alt="Critical Error"></span><span id="af_panelSplitter::vertical-collapse-icon"><img src="/epmos/afr/fusion/splittervc.png" width="23" height="7" border="0" style="vertical-align:top;cursor:default" title="Collapse Pane" alt="Collapse Pane"></span><span id="af_message::info-icon"><img src="/epmos/afr/info.png" width="16" height="16" border="0" title="Information" alt="Information"></span><span id="af_message::fatal-icon"><img src="/epmos/afr/error.png" width="16" height="16" border="0" title="Critical Error" alt="Critical Error"></span><span id="af_messages::warning-icon"><img src="/epmos/afr/warning.png" width="16" height="16" border="0" title="Warning" alt="Warning"></span><span id="af_message::confirmation-icon"><img src="/epmos/afr/confirmation.png" width="16" height="16" border="0" title="Confirmation" alt="Confirmation"></span><span id="af_message::error-icon"><img src="/epmos/afr/error.png" width="16" height="16" border="0" title="Error" alt="Error"></span><span id="af_messages::error-icon"><img src="/epmos/afr/error.png" width="16" height="16" border="0" title="Error" alt="Error"></span><span id="af_messages::confirmation-icon"><img src="/epmos/afr/confirmation.png" width="16" height="16" border="0" title="Confirmation" alt="Confirmation"></span></span><div id="afr::DlgSrvPopupCtnr"><div id="afr::DlgSrvPopupCtnr::content" style="display:none"></div></div><DIV id="afr::UtilPopupCtnr" _pid="j_id9" _did="j_id10" _dmw="250" style="display:none"><div id="j_id9" style="display:none"><div style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;" id="j_id9::content"><div id="j_id10" class="x17j"><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><div class="x18r" _afrPanelWindowBackground="1"></div><table cellpadding="0" cellspacing="0" border="0" summary="" class="x17q"><tr><td class="x17s" id="j_id10::_hse">&nbsp;</td><td class="x17u" id="j_id10::_hce"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td><div id="j_id10::_ticn" class="x18l" style="display:none"></div></td><td class="x17y" id="j_id10::tb"><div id="j_id10::_ttxt" class="x18j"></div></td></tr></table></td><td class="x17w" id="j_id10::_hee">&nbsp;</td></tr><tr><td class="x183" id="j_id10::_cse">&nbsp;</td><td class="x1o" id="j_id10::contentContainer"></td><td class="x185" id="j_id10::_cee">&nbsp;</td></tr><tr><td class="x187" id="j_id10::_fse"><div></div></td><td class="x189" id="j_id10::_fce"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x18c" id="j_id10::_fcc"><button type="button" id="j_id10::ok" class="xf6 p_AFTextOnly" onclick="return false;">OK</button><button type="button" id="j_id10::cancel" class="xf6 p_AFTextOnly" onclick="return false;">Cancel</button></td><td align="left" valign="bottom"><div class="x18i"><a tabIndex="-1" class="x18g" id="j_id10::_ree" title="Resize"></a></div></td></tr></table></td><td class="x18b" id="j_id10::_fee"><div></div></td></tr></table></div></div></div></DIV></div><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/dnd-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/menu-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/iedit-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/uncommon-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/stretch-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/_AdfPageCustomizable-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/input-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/_AdfUserInactivityTimeout-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/detail-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/header-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/box-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/region-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/toolbar-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/selectonelistbox-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/selectonechoice-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/select-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/nav-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/eum-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/form-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/imagelink-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/poll-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/print-11.1.1.7.1-4197.js"></script><script type="text/javascript" src="/epmos/afr/partition/unknown/n/default/opt/scrollComponentIntoView-11.1.1.7.1-4197.js"></script><script type="text/javascript">AdfBootstrap._onLoad=function (){if (AdfPage.PAGE.__checkRichResponseDirty()) return;AdfUserActivityInfo.getInstance('pr0').setContextId('005UM33skgS8XrKaETz0ES0005fN00BRx1');var isCachedPage = AdfPage.PAGE.__handleCachedPageForNewWindow('1bdcyo5hpe_1');if (!isCachedPage){window.name='1bdcyo5hpe_1';};AdfAgent.AGENT.elementsAdded(document);AdfDhtmlLookAndFeel.addSkinProperties({"af|decorativeBox::top-start-tr-width":"6px","AFPopupSelectorFooterStart":"x14r","af|decorativeBox::top-end-tr-width":"6px","af|decorativeBox::end-tr-width":"6px","af|dialog::resize-ghost":"x17o","af|messages::intro":"x15j","af|decorativeBox::top-start:flow-tr-width":"4px",".AFWorkaround-tr-disable-property-delta-sync":"false","AFPopupSelector":"x14g","af|messages::message-group-title":"x15k","af|decorativeBox::bottom-end:flow-tr-width":"4px","af|message::intro":"x15r","af|popup-tr-shadow-offset":1,"AFPopupSelectorHeader":"x14k","af|messages::detail":"x15t","af|decorativeBox::top-tr-height":"5px","af|panelSplitter-tr-collapse-animation-duration":"400","af|decorativeBox::end:flow-tr-width":"4px","AFPopupSelectorContentStart":"x14o","AFOverflowElement":"xkf","af|decorativeBox::top-end:flow-tr-width":"4px","af|showDetailHeader::disclosed-icon-style":"x1aw","af|decorativeBox::start:flow-tr-width":"4px","af|messages::component-link":"xfv","af|panelBox::undisclosed-icon-style":"x1ax","af|message::summary":"x15p","af|decorativeBox::bottom-tr-height":"8px","af|messages::summary":"x15s","af|navigationPane-tr-layout-type":"overflow","AFPopupSelectorContentEnd":"x14p","af|decorativeBox::bottom-start-tr-width":"6px","AFPopupSelectorContent":"x14n","af|decorativeBox::start-tr-width":"6px","af|decorativeBox::top:flow-tr-height":"4px","af|panelSplitter-tr-divider-size":"7","AFPopupSelectorFooterEnd":"x14s","af|showDetailHeader::undisclosed-icon-style":"x1av","af|panelBox::disclosed-icon-style":"x1ay","af|popup-tr-shadow-starting-black-percent":50,"af|decorativeBox::bottom-start:flow-tr-width":"4px","af|popup-tr-shadow-pixel-size":9,"af|decorativeBox::bottom:flow-tr-height":"4px","af|decorativeBox::bottom-end-tr-width":"6px","af|messages::message-group-type-separator":"x15l","af|message::type":"x15o","AFPopupSelectorHeaderStart":"x14l","af|message::detail":"x15q","af|messages::header-text":"x15i","af|menu-tr-visible-items":20,"AFPopupSelectorFooter":"x14q","AFPopupSelectorHeaderEnd":"x14m"});AdfPage.PAGE.addComponents(new AdfRichDocument('d1',{'title':'Document  756671.1','_afrSkpLnk':'kmPgTpl:pt_psl3'}),new AdfRichForm('f1'),new AdfRichPanelSplitter('kmPgTpl:pt_headerPs',{'orientation':'vertical','splitterPosition':30}),new AdfRichPanelStretchLayout('kmPgTpl:svHd:pt_brBar',{'startWidth':260,'endWidth':'auto'}),new AdfRichToolbar('kmPgTpl:svHd:pv1:pvToolbar'),new AdfRichCommandLink('kmPgTpl:svHd:pv1:pvptcl'),new AdfRichCommandLink('kmPgTpl:svHd:pv1:pvptclL'),new AdfRichCommandToolbarButton('kmPgTpl:svHd:pv1:pvOnOffLink',{'accessKey':'\uffff','text':'PowerView is Off','styleClass':'p_AFTextOnly','icon':'/epmos/common/images/pvoff.png'}),new AdfRichMenu('kmPgTpl:svHd:pv1:m2'),new AdfRichCommandMenuItem('kmPgTpl:svHd:pv1:togglePV'),new AdfRichCommandMenuItem('kmPgTpl:svHd:pv1:editPvId',{'disabled':true}),new AdfRichCommandMenuItem('kmPgTpl:svHd:pv1:newPV'),new AdfRichMenu('kmPgTpl:svHd:pv1:m3',{'disabled':true,'text':'Recent PowerViews'}),new AdfRichMenu('kmPgTpl:svHd:pv1:m4',{'disabled':true,'text':'Named PowerViews'}),new AdfRichCommandMenuItem('kmPgTpl:svHd:pv1:managePVMI',{'behaviors':new AdfShowPopupBehavior('managePV',AdfRichPopup.ALIGN_AFTER_END,'pvOnOffLink','action'),'accessKey':'\uffff','disabled':true,'text':'Manage PowerViews'}),new AdfRichGoMenuItem('kmPgTpl:svHd:pv1:learnMorePV',{'destination':'http://docs.oracle.com/cd/E25290_01/doc.60/e25224/general.htm#BABFJDGA','targetFrame':'_blank'}),new AdfRichPopup('kmPgTpl:svHd:pv1:pvAddEdit',{'contentDelivery':'lazyUncached','autoCancel':'disabled'}),new AdfRichPopup('kmPgTpl:svHd:pv1:managePV',{'contentDelivery':'lazyUncached'}),new AdfRichPopup('kmPgTpl:svHd:sug1:sggstrpp'),new AdfRichPanelGroupLayout('kmPgTpl:svHd:sug1:pglcl'),new AdfRichPopup('kmPgTpl:svHd:pop1',{'contentDelivery':'lazyUncached','autoCancel':'disabled'}),new AdfRichRegion('kmPgTpl:svHd:r1',{'viewId':'/user-menu-taskflow/userMenu','immediate':true}),new AdfRichMenuBar('kmPgTpl:svHd:r1:0:dc_mb1'),new AdfRichMenu('kmPgTpl:svHd:r1:0:dc_m1',{'text':'Mark (Available)'}),new AdfRichCommandMenuItem('kmPgTpl:svHd:r1:0:dc_cmi1'),new AdfRichCommandMenuItem('kmPgTpl:svHd:r1:0:dc_cmi2'),new AdfRichGoMenuItem('kmPgTpl:svHd:r1:0:dc_cmi3',{'destination':'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP1498','targetFrame':'_blank'}),new AdfRichGoMenuItem('kmPgTpl:svHd:r1:0:dc_cmi4',{'destination':'/epmos/faces/MyAccount'}),new AdfRichGoMenuItem('kmPgTpl:svHd:r1:0:dc_cmi5',{'destination':'/epmos/logout?next_url=https://login.oracle.com/sso/logout?p_done_url='}),new AdfRichCommandLink('kmPgTpl:svHd:r1:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichCommandImageLink('kmPgTpl:svHd:cil1',{'clientListeners':{click:clickMessageCenter},'behaviors':new AdfShowPopupBehavior('p2',AdfRichPopup.ALIGN_BEFORE_END,'cil1'),'accessKey':'\uffff','text':'(0)','shortDesc':'Last Refreshed: 29-Oct-2018 16:43 GMT','icon':'/epmos/common/images/email_16.png','disabledIcon':'/epmos/common/images/communication_applications_grey_16.png'}),new AdfRichPopup('kmPgTpl:svHd:p2',{'contentDelivery':'lazyUncached'}),new AdfRichCommandLink('kmPgTpl:svHd:tc1:tccl1',{'visible':false,'accessKey':'\uffff','text':'a'}),new AdfRichPopup('kmPgTpl:svHd:tc1:tcp1',{'contentDelivery':'lazyUncached','animate':'false'}),new AdfRichMenuBar('kmPgTpl:svHd:mb1'),new AdfRichGoMenuItem('kmPgTpl:svHd:cni5a',{'destination':'/epmos/faces/ui/sr/SrCreate.jspx?srType=Non-Technical'}),new AdfRichMenu('kmPgTpl:svHd:m1',{'text':'Help'}),new AdfRichGoMenuItem('kmPgTpl:svHd:pgItem',{'destination':'javascript:var newWin = window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP952\',\'helpWindow\',\'width=650, height=600,location=yes,resizable=yes,scrollbars=yes,status=no\', \'true\');','targetFrame':'_self'}),new AdfRichGoMenuItem('kmPgTpl:svHd:gnItem',{'destination':'javascript:var newWin = window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP131\',\'helpWindow\',\'width=650, height=600,location=yes,resizable=yes,scrollbars=yes,status=no\', \'true\');','targetFrame':'_self'}),new AdfRichGoMenuItem('kmPgTpl:svHd:gnItemj_id_1',{'destination':'javascript:var newWin = window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP741\',\'helpWindow\',\'width=650, height=600,location=yes,resizable=yes,scrollbars=yes,status=no\', \'true\');','targetFrame':'_self'}),new AdfRichGoMenuItem('kmPgTpl:svHd:gnItemj_id_2',{'destination':'javascript:var newWin = window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP733\',\'helpWindow\',\'width=650, height=600,location=yes,resizable=yes,scrollbars=yes,status=no\', \'true\');','targetFrame':'_self'}),new AdfRichGoMenuItem('kmPgTpl:svHd:gnItemj_id_3',{'destination':'javascript:var newWin = window.open(\'http://www.oracle.com/pls/topic/lookup?ctx=mos_en&id=MOSHP\',\'helpWindow\',\'width=650, height=600,location=yes,resizable=yes,scrollbars=yes,status=no\', \'true\');','targetFrame':'_self'}),new AdfRichPanelStretchLayout('kmPgTpl:svCH:psl1',{'topHeight':'0px'}),new AdfRichRegion('kmPgTpl:svCH:r1',{'immediate':true}),new AdfRichCommandLink('kmPgTpl:svCH:r1:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichPanelStretchLayout('kmPgTpl:pt_psl1',{'bottomHeight':'25'}),new AdfRichDecorativeBox('kmPgTpl:pt_db8',{'topHeight':'26px'}),new AdfRichPanelStretchLayout('kmPgTpl:svMenu:ptpsl2',{'endWidth':'auto'}),new AdfRichNavigationPane('kmPgTpl:svMenu:np1'),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:0:cni1',{'tabName':'Dashboard','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Dashboard','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:1:cni1',{'tabName':'Knowledge','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Knowledge','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:2:cni1',{'tabName':'Service Requests','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Service Requests','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:3:cni1',{'tabName':'Patches & Updates','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Patches & Updates','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:4:cni1',{'tabName':'Community','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Community','destination':'https://community.oracle.com/community/support?nodeId=itemNode_CommunityHome915781212','targetFrame':'_blank','icon':'/epmos/common/images/offsite_ena.png'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:5:cni1',{'tabName':'Certifications','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Certifications','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:6:cni1',{'tabName':'Systems','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Systems','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:7:cni1',{'tabName':'Collector','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Collector','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:8:cni1',{'tabName':'Advanced Customer Services','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Advanced Customer Services','destination':'https://advancedsupport.oracle.com?nodeId=itemNode_AcsLink915781212','targetFrame':'_blank','icon':'/epmos/common/images/offsite_ena.png'}),new AdfRichCommandNavigationItem('kmPgTpl:svMenu:np1:9:cni1',{'tabName':'Settings','clientListeners':{action:[unsavedDataHandlerHook,menuTabClicked]},'partialSubmit':true,'accessKey':'\uffff','text':'Settings','targetFrame':'','icon':'/epmos/common/images/blank.gif'}),new AdfRichPanelGroupLayout('kmPgTpl:svMenu:gsb:pt_pgl1',{'layout':'horizontal','halign':'left','styleClass':'x2a3'}),new AdfRichCommandButton('kmPgTpl:svMenu:gsb:dc_cb1',{'clientListeners':{click:refreshFavMenu},'behaviors':new AdfShowPopupBehavior('fm1',AdfRichPopup.ALIGN_AFTER_START,'dc_cb1'),'partialSubmit':true,'icon':'/epmos/common/images/favorites_qualifier_arrow.png','accessKey':'\uffff','styleClass':'x23s','shortDesc':'Favorites'}),new AdfRichPopup('kmPgTpl:svMenu:gsb:fm1',{'contentDelivery':'lazyUncached'}),new AdfRichPopup('kmPgTpl:svMenu:gsb:fm2'),new AdfRichCommandButton('kmPgTpl:svMenu:gsb:cb1',{'behaviors':new AdfShowPopupBehavior('p1',AdfRichPopup.ALIGN_AFTER_START,'cb1','action'),'icon':'/epmos/ui/images/recent_searches_menuarrow_global.png','accessKey':'\uffff','styleClass':'x23v','shortDesc':'Recent Searches'}),new AdfRichPopup('kmPgTpl:svMenu:gsb:p1'),new AdfRichSubform('kmPgTpl:svMenu:gsb:subFgsb',{'defaultCommand':'menu_pt_cil2'}),new AdfRichOutputLabel('kmPgTpl:svMenu:gsb:subFgsb:pt_hiddenLabel',{'for':'kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG'}),new AdfRichInputText('kmPgTpl:svMenu:gsb:subFgsb:mGlobalSearch:pt_itG',{'osUrl':'https://support.oracle.com/CSP/main/ttj?userQuery=queryString&requestedSuggestions=10','clientListeners':{focus:setOracleSuggestsOrigin,keyUp:[showSuggestions,logOracleSuggestClickStream]},'simple':true,'immediate':true,'styleClass':'x23o','columns':50}),new AdfRichCommandImageLink('kmPgTpl:svMenu:gsb:subFgsb:menu_pt_cil2',{'clientListeners':{click:[logOracleSuggestClickStream,validateSearchTerm]},'accessKey':'\uffff','text':'','shortDesc':'Global Search','styleClass':'x23y','icon':'/epmos/common/images/searchiconbutton.gif'}),new AdfRichPanelStretchLayout('kmPgTpl:pt_psl3',{'topHeight':'auto'}),new AdfRichPanelHeader('kmPgTpl:overTitle:ot1'),new AdfRichGoLink('kmPgTpl:svSurvey:gl1',{'surveyId':'u0bpuefojk2grnt','clientListeners':{click:handleFBClick},'accessKey':'\uffff','text':'Give Feedback...','destination':'javascript:var newWin = window.open(\'https%3A%2F%2Fora-gcp1.custhelp.com%2Fci%2Fdocuments%2Fdetail%2F5%2F1046%2F12%2F742014625729a6c0d41118e1a8a926dbebf67a0c%3Fuser%3DMARK.EVA%40FIVIUM.CO.UK%26uID%3D6B6CE4815DBA6176E050E60AD27F53A2%26fID%3Du0bpuefojk2grnt%26cua%3Dfalse%26page%3DDocumentDisplay\',\'feedbackWindow\',\'width=630, height=600, location=no,resizable=yes,scrollbars=yes,status=no,left=\'+getLeftOffset(630)+\',top=\'+getTopOffset(600)+\'\',\'true\');','targetFrame':'_self','shortDesc':'Provide feedback for the features on this page','styleClass':'padding-left: 12px; padding-right: 12px'}),new AdfRichPopup('kmPgTpl:svMsg:msgAsPop'),new AdfRichCommandLink('kmPgTpl:cl1'),new AdfPageCustomizable('kmPgTpl:pageCustomizable1',{'layoutView':false,'componentView':false,'isEditMode':false,'contentContribKey':AdfKeyStroke.getKeyStrokeFromMarshalledString('shift ctrl C'),'editModeKey':AdfKeyStroke.getKeyStrokeFromMarshalledString('shift ctrl E'),'inlineStyle':''}),new AdfRichPanelStretchLayout('kmPgTpl:pslMain'),new AdfRichPanelStretchLayout('kmPgTpl:psl1',{'startWidth':'10'}),new AdfRichRegion('kmPgTpl:r1',{'viewId':'/km-document-content-task-flow/DocumentContent','immediate':true}),new AdfRichPanelStretchLayout('kmPgTpl:r1:0:psl1',{'topHeight':'auto'}),new AdfRichPanelHeader('kmPgTpl:r1:0:ph22'),new AdfRichPopup('kmPgTpl:r1:0:srFavorite'),new AdfRichCommandImageLink('kmPgTpl:r1:0:cil4',{'immediate':true,'partialSubmit':true,'shortDesc':'Click to add to Favorites','icon':'/epmos/common/images/favorites_qualifier_notsel.png'}),new AdfRichPopup('kmPgTpl:r1:0:sug1:sggstrpp'),new AdfRichPanelGroupLayout('kmPgTpl:r1:0:sug1:pglcl'),new AdfRichPopup('kmPgTpl:r1:0:sug2:sggstrpp'),new AdfRichPanelGroupLayout('kmPgTpl:r1:0:sug2:pglcl'),new AdfRichOutputLabel('kmPgTpl:r1:0:ol22'),new AdfRichCommandImageLink('kmPgTpl:r1:0:toBottom',{'behaviors':new AdfScrollComponentIntoViewBehavior('toTop',false),'immediate':true,'accessKey':'\uffff','text':'To Bottom','shortDesc':'To Bottom','inlineStyle':'text-decoration:none','icon':'/epmos/ui/images/quicklink_smlarrowdown_enabled.gif'}),new AdfRichSpacer('kmPgTpl:r1:0:s23',{'height':'5','width':'10'}),new AdfRichPanelBox('kmPgTpl:r1:0:pb5',{'text':'Was this document helpful?','showMaximize':false}),new AdfRichPanelStretchLayout('kmPgTpl:r1:0:psl3'),new AdfRichRegion('kmPgTpl:r1:0:r7',{'viewId':'/km-feedback-widget-task-flow/KmFeedbackWidget','immediate':true}),new AdfRichSelectOneRadio('kmPgTpl:r1:0:r7:0:sor1',{'autoSubmit':true,'label':' '}),new AdfRichPanelFormLayout('kmPgTpl:r1:0:r7:0:pfl3',{'inlineStyle':'margin-left:0;padding-left:0;'}),new AdfRichCommandLink('kmPgTpl:r1:0:r7:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichPanelBox('kmPgTpl:r1:0:pb1',{'text':'Document Details','showMaximize':false}),new AdfRichPopup('kmPgTpl:r1:0:comeditpopw',{'contentDelivery':'lazyUncached','autoCancel':'disabled'}),new AdfRichGoImageLink('kmPgTpl:r1:0:wgil2',{'email':'MARK.EVA@FIVIUM.CO.UK','documentDisplayPath':'/faces/DocumentDisplay?id=756671.1','documentTitle':'Master Note for Database Proactive Patch Program','type':'Document','appContext':'/epmos','documentId':'756671.1','clientListeners':{click:sendContentLinkEmailDoc},'accessKey':'\uffff','shortDesc':'Email link to this document','icon':'/epmos/common/images/email_16.png'}),new AdfRichGoImageLink('kmPgTpl:r1:0:wgil3',{'shortDesc':'Open document in new window','icon':'/epmos/common/images/offsite_ena.png'}),new AdfRichCommandLink('kmPgTpl:r1:0:wcl5',{'itemType':'ANNOUNCEMENT','itemId':'756671.1','clientListeners':{action:printClicked1},'behaviors':new AdfShowPrintablePageBehavior(),'accessKey':'\uffff','shortDesc':'Printable Page'}),new AdfRichOutputLabel('kmPgTpl:r1:0:wol7'),new AdfRichOutputLabel('kmPgTpl:r1:0:wol6'),new AdfRichOutputLabel('kmPgTpl:r1:0:wol5'),new AdfRichOutputLabel('kmPgTpl:r1:0:wol4'),new AdfRichOutputLabel('kmPgTpl:r1:0:wol3',{'for':'kmPgTpl:r1:soc3'}),new AdfRichSelectOneChoice('kmPgTpl:r1:0:soc3',{'autoSubmit':true}),new AdfRichOutputLabel('kmPgTpl:r1:0:wol2'),new AdfRichCommandButton('kmPgTpl:r1:0:wcil3',{'partialSubmit':true}),new AdfRichCommandButton('kmPgTpl:r1:0:wcil2',{'partialSubmit':true}),new AdfRichPopup('kmPgTpl:r1:0:comeditpopwidget',{'contentDelivery':'lazyUncached','autoCancel':'disabled'}),new AdfRichPanelBox('kmPgTpl:r1:0:pb3',{'text':'Related Products','showMaximize':false}),new AdfRichCommandLink('kmPgTpl:r1:0:i33:0:cl7'),new AdfRichCommandLink('kmPgTpl:r1:0:i33:1:cl7'),new AdfRichCommandLink('kmPgTpl:r1:0:i33:2:cl7'),new AdfRichCommandLink('kmPgTpl:r1:0:i33:3:cl7'),new AdfRichCommandLink('kmPgTpl:r1:0:i33:4:cl7'),new AdfRichCommandLink('kmPgTpl:r1:0:wcl1'),new AdfRichRegion('kmPgTpl:r1:0:r4',{'viewId':'/km-document-widget-advisor-task-flow/DocumentWidgetAdvisorInfo','immediate':true}),new AdfRichPoll('kmPgTpl:r1:0:r4:0:p1',{'interval':500,'timeout':1200000}),new AdfRichPanelBox('kmPgTpl:r1:0:r4:0:pb1',{'text':'Information Centers','showMaximize':false}),new AdfRichCommandLink('kmPgTpl:r1:0:r4:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichRegion('kmPgTpl:r1:0:r6',{'viewId':'/km-document-widget-references-task-flow/DocumentWidgetReferences','immediate':true}),new AdfRichPoll('kmPgTpl:r1:0:r6:0:p1',{'interval':500,'timeout':1200000}),new AdfRichPanelBox('kmPgTpl:r1:0:r6:0:pb1',{'text':'Document References','showMaximize':false}),new AdfRichCommandLink('kmPgTpl:r1:0:r6:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichPanelBox('kmPgTpl:r1:0:pb4',{'text':'Recently Viewed','showMaximize':false}),new AdfRichPanelStretchLayout('kmPgTpl:r1:0:psl2'),new AdfRichRegion('kmPgTpl:r1:0:r5',{'viewId':'/km-recent-articles-taskflow/recentArticles','immediate':true}),new AdfRichGoLink('kmPgTpl:r1:0:r5:0:gl1',{'documentDisplayURL':'/epmos/faces/DocumentDisplay','documentId':'756671.1','clientListeners':{click:recentLinkWidgetRedirect},'accessKey':'\uffff','text':'Master Note for Database Proactive Patch Program [756671.1]','destination':'/epmos/faces/DocumentDisplay?id=756671.1&parent=WIDGET_RECENTLY_VIEWED&sourceId=756671.1','targetFrame':'_self'}),new AdfRichGoLink('kmPgTpl:r1:0:r5:0:gl1j_id_1',{'documentDisplayURL':'/epmos/faces/DocumentDisplay','documentId':'274526.1','clientListeners':{click:recentLinkWidgetRedirect},'accessKey':'\uffff','text':'How To Download And Install The Latest OPatch(6880880) Version [274526.1]','destination':'/epmos/faces/DocumentDisplay?id=274526.1&parent=WIDGET_RECENTLY_VIEWED&sourceId=756671.1','targetFrame':'_self'}),new AdfRichGoLink('kmPgTpl:r1:0:r5:0:gl1j_id_2',{'documentDisplayURL':'/epmos/faces/DocumentDisplay','documentId':'293369.1','clientListeners':{click:recentLinkWidgetRedirect},'accessKey':'\uffff','text':'Master Note For OPatch [293369.1]','destination':'/epmos/faces/DocumentDisplay?id=293369.1&parent=WIDGET_RECENTLY_VIEWED&sourceId=756671.1','targetFrame':'_self'}),new AdfRichGoLink('kmPgTpl:r1:0:r5:0:gl1j_id_3',{'documentDisplayURL':'/epmos/faces/DocumentDisplay','documentId':'1313767.1','clientListeners':{click:recentLinkWidgetRedirect},'accessKey':'\uffff','text':'Package body is INVALID after impdp [1313767.1]','destination':'/epmos/faces/DocumentDisplay?id=1313767.1&parent=WIDGET_RECENTLY_VIEWED&sourceId=756671.1','targetFrame':'_self'}),new AdfRichGoLink('kmPgTpl:r1:0:r5:0:gl1j_id_4',{'documentDisplayURL':'/epmos/faces/DocumentDisplay','documentId':'1982901.1','clientListeners':{click:recentLinkWidgetRedirect},'accessKey':'\uffff','text':'Resize Operation Completed For File# [1982901.1]','destination':'/epmos/faces/DocumentDisplay?id=1982901.1&parent=WIDGET_RECENTLY_VIEWED&sourceId=756671.1','targetFrame':'_self'}),new AdfRichCommandLink('kmPgTpl:r1:0:r5:0:wcl2'),new AdfRichCommandLink('kmPgTpl:r1:0:r5:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichCommandButton('kmPgTpl:r1:0:cb1',{'clientListeners':{click:openAskCommunity},'immediate':true,'icon':'/epmos/common/images/comm_thread_15x15.png','accessKey':'\uffff','text':'Ask in Community...','inlineStyle':'vertical-align:middle; height:19px;'}),new AdfRichShowDetailHeader('kmPgTpl:r1:0:sdh1',{'disclosed':true,'shortDesc':'Related Products','text':'Related'}),new AdfRichPanelHeader('kmPgTpl:r1:0:ph2',{'shortDesc':'Related Products'}),new AdfRichPanelHeader('kmPgTpl:r1:0:ph1',{'shortDesc':'Related Translations'}),new AdfRichCommandLink('kmPgTpl:r1:0:i29:1:cl5',{'shortDesc':'\u65e5\u672c\u8a9e'}),new AdfRichCommandImageLink('kmPgTpl:r1:0:toTop',{'behaviors':new AdfScrollComponentIntoViewBehavior('s23',false),'immediate':true,'accessKey':'\uffff','text':'Back to Top','shortDesc':'Back to Top','inlineStyle':'text-decoration:none','icon':'/epmos/ui/images/quicklink_smlarrowup_enabled.gif'}),new AdfRichCommandLink('kmPgTpl:r1:0:_afrCommandDelegate',{'partialSubmit':true}),new AdfRichPanelStretchLayout('kmPgTpl:pt_psl2',{'bottomHeight':'25px'}),new AdfRichToolbar('kmPgTpl:svFt2:npFtr'),new AdfRichDialog('d1::msgDlg',{'okVisible':false,'cancelVisible':false,'cancelTextAndAccessKey':'OK','modal':false,'resize':'on','title':''}),new AdfDialogServicePopupContainer('afr::DlgSrvPopupCtnr'),new AdfRichPopup('j_id9',{'contentDelivery':'immediate'}),new AdfRichDialog('j_id10',{'okVisible':false,'cancelVisible':false,'closeIconVisible':false}));AdfPage.PAGE.setDefaultMessageHandlerComponentId("d1");AdfPage.PAGE.__initializeSessionTimeoutTimer(2700000, 120000, "https://support.oracle.com:443/epmos/faces/DocumentDisplay?id=756671.1");AdfPage.PAGE.__initUserInactivityTimeout(1200000);page.__setAutomationEnabled(false);page.__setCssSelectorsUncompressed(false);AdfPage.PAGE.__setViewId('/DocumentDisplay');var exScripts=AdfBootstrap._extendedScripts;for (var i=0;i<exScripts.length;i++){exScripts[i]()};AdfBootstrap._extendedScripts=null;AdfPage.PAGE.__onLoad();};window.onload=AdfBootstrap._onLoad;</script><script type="text/javascript">AdfBootstrap._extendedScripts=[function(){initialiseSuggest('https://support.oracle.com/CSP/main/ttj?userQuery=queryString&requestedSuggestions=1');},function(){setOSContextPath('https://support.oracle.com/CSP/main/ttj?userQuery=queryString&requestedSuggestions=10');}];</script></body><!--Created by Oracle ADF (Version information hidden), accessibility (mode:default, contrast:standard, size:medium), skin:ep.mos (mos)--></html>

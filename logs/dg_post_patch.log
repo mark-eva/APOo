@@ -1,0 +1,48 @@
+
+no rows selected
+
+
+ SEQUENCE# START_SCN  APPLIED    COMP_TIME            NAME                                                                                                                                              
+---------- ---------- ---------- -------------------- --------------------------------------------------                                                                                                
+       265 3492825    NO         08-dec-2017 17:50:47 o1_mf_1_265_f2on7qbv_.arc                                                                                                                         
+       265 3492825    NO         08-dec-2017 17:50:47 test_ds1dg                                                                                                                                        
+       264 3490709    NO         08-dec-2017 17:40:46 o1_mf_1_264_f2omnyow_.arc                                                                                                                         
+       264 3490709    YES        08-dec-2017 17:40:46 test_ds1dg                                                                                                                                        
+       263 3490633    NO         08-dec-2017 17:30:47 o1_mf_1_263_f2om27xy_.arc                                                                                                                         
+       263 3490633    YES        08-dec-2017 17:30:50 test_ds1dg                                                                                                                                        
+       262 3489374    NO         08-dec-2017 17:23:06 o1_mf_1_262_f2olmtt2_.arc                                                                                                                         
+       262 3489374    YES        08-dec-2017 17:23:06 test_ds1dg                                                                                                                                        
+       261 3488132    NO         08-dec-2017 17:13:06 o1_mf_1_261_f2ol123d_.arc                                                                                                                         
+       261 3488132    YES        08-dec-2017 17:13:06 test_ds1dg                                                                                                                                        
+       260 3486597    NO         08-dec-2017 17:03:05 o1_mf_1_260_f2okg9k7_.arc                                                                                                                         
+
+ SEQUENCE# START_SCN  APPLIED    COMP_TIME            NAME                                                                                                                                              
+---------- ---------- ---------- -------------------- --------------------------------------------------                                                                                                
+       260 3486597    YES        08-dec-2017 17:03:05 test_ds1dg                                                                                                                                        
+
+12 rows selected.
+
+
+no rows selected
+
+
+ SEQUENCE# START_SCN  APPLIED    COMP_TIME            NAME                                                                                                                                              
+---------- ---------- ---------- -------------------- --------------------------------------------------                                                                                                
+       279 3782262    NO         08-dec-2017 17:50:58 o1_mf_1_279_f2on82wc_.arc                                                                                                                         
+       279 3782262    NO         08-dec-2017 17:50:58 test1_ds1dg                                                                                                                                       
+       278 3780116    NO         08-dec-2017 17:40:58 o1_mf_1_278_f2omob9j_.arc                                                                                                                         
+       278 3780116    YES        08-dec-2017 17:40:58 test1_ds1dg                                                                                                                                       
+       277 3780040    NO         08-dec-2017 17:30:59 o1_mf_1_277_f2om2mmw_.arc                                                                                                                         
+       277 3780040    YES        08-dec-2017 17:31:01 test1_ds1dg                                                                                                                                       
+       276 3778767    NO         08-dec-2017 17:23:28 o1_mf_1_276_f2olnj7c_.arc                                                                                                                         
+       276 3778767    YES        08-dec-2017 17:23:28 test1_ds1dg                                                                                                                                       
+       275 3777520    NO         08-dec-2017 17:13:30 o1_mf_1_275_f2ol1tjf_.arc                                                                                                                         
+       275 3777520    YES        08-dec-2017 17:13:30 test1_ds1dg                                                                                                                                       
+       274 3775732    NO         08-dec-2017 17:03:29 o1_mf_1_274_f2okh1xc_.arc                                                                                                                         
+
+ SEQUENCE# START_SCN  APPLIED    COMP_TIME            NAME                                                                                                                                              
+---------- ---------- ---------- -------------------- --------------------------------------------------                                                                                                
+       274 3775732    YES        08-dec-2017 17:03:30 test1_ds1dg                                                                                                                                       
+
+12 rows selected.
+

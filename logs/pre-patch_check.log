@@ -1,0 +1,20 @@
+Oracle Interim Patch Installer version 12.2.0.1.13
+Copyright (c) 2018, Oracle Corporation.  All rights reserved.
+
+PREREQ session
+
+Oracle Home       : /oracle/product/12.1.0/db1
+Central Inventory : /oraInventory
+   from           : /oracle/product/12.1.0/db1/oraInst.loc
+OPatch version    : 12.2.0.1.13
+OUI version       : 12.1.0.2.0
+Log file location : /oracle/product/12.1.0/db1/cfgtoollogs/opatch/opatch2018-09-18_15-51-24PM_1.log
+
+Invoking prereq "checkconflictagainstohwithdetail"
+
+Prereq "checkConflictAgainstOHWithDetail" is not executed.
+
+The details are:
+No patches specified.
+
+OPatch failed with error code 2
